@@ -1,0 +1,21 @@
+@import "../../scss/utils";
+
+.wrapper {
+  margin: 0 vw(250px);
+
+  @include HD {
+    margin: 0 vwh(45px);
+  }
+
+  @include Tablet {
+    margin: 0 vwt(12x);
+  }
+
+  @include Mobile {
+    margin: 0 vwm(12px);
+  }
+}
+
+.title {
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+@import "../utils";
+
+html {
+  height: 100%;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  background-color: var(--background);
+}
+
+h2 {
+  font-size: vw(60px);
+  font-weight: 700;
+
+  @include HD {
+    font-size: vwh(10px);
+  }
+
+  @include Tablet {
+    font-size: vwt(10px);
+  }
+
+  @include Mobile {
+    font-size: vwm(10px);
+  }
+}
