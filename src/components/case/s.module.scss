@@ -1,0 +1,49 @@
+@import "../../scss/utils";
+
+.card {
+  display: grid;
+  grid-template-columns: vw(320px) auto;
+  height: vw(380px);
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(240, 248, 255, 0.13);
+
+  &:hover {
+    border: 1px solid rgba(240, 248, 255);
+  }
+}
+
+.type {
+  font-size: vw(18px);
+  text-transform: uppercase;
+  margin-bottom: vw(10px);
+}
+
+.line {
+  display: flex;
+  gap: vw(10px);
+  margin-bottom: vw(40px);
+  cursor: pointer;
+
+  svg {
+    stroke: #F0F8FF;
+  }
+
+  &:hover {
+    color: #FF5E5E;
+
+    svg {
+      stroke: #FF5E5E;
+    }
+  }
+}
+
+.name {
+  font-size: vw(40px);
+  font-weight: 700;
+}
+
+.technologies {
+  font-size: vw(18px);
+  margin-bottom: vw(20px);
+}
