@@ -20,15 +20,19 @@ import SQLLogo from "../../assets/svg/skills/postgresql.svg?react";
 import s from "./s.module.scss";
 
 type Props = {
-    title: string,
+    title: string;
+    description: string;
 };
 
-const Skills = ({title}: Props) => {
+const Technologies = ({title, description}: Props) => {
     return (
         <div className={s.wrapper}>
             <h2 className={s.title}>
                 {title}
             </h2>
+            <p className={s.text}>
+                {description}
+            </p>
 
             <div className={s.skills}>
                 <ul className={s.list}>
@@ -56,6 +60,10 @@ const Skills = ({title}: Props) => {
                         <ViteLogo/>
                         <p>Vite</p>
                     </li>
+                    <li className={s.item}>
+                        <FigmaLogo/>
+                        <p>Figma</p>
+                    </li>
                 </ul>
                 <ul className={s.list}>
                     <li className={s.item}>
@@ -78,6 +86,14 @@ const Skills = ({title}: Props) => {
                         <JestLogo/>
                         <p>Jest</p>
                     </li>
+                    <li className={s.item}>
+                        <GitLogo/>
+                        <p>Git</p>
+                    </li>
+                    <li className={s.item}>
+                        <SQLLogo/>
+                        <p>PostgreSQL</p>
+                    </li>
                 </ul>
                 <ul className={s.list}>
                     <li className={s.item}>
@@ -88,22 +104,12 @@ const Skills = ({title}: Props) => {
                         <WSLogo/>
                         <p>WebStorm</p>
                     </li>
-                    <li className={s.item}>
-                        <FigmaLogo/>
-                        <p>Figma</p>
-                    </li>
-                    <li className={s.item}>
-                        <GitLogo/>
-                        <p>Git</p>
-                    </li>
-                    <li className={s.item}>
-                        <SQLLogo/>
-                        <p>PostgreSQL</p>
-                    </li>
+
+
                 </ul>
             </div>
         </div>
     );
 };
 
-export default Skills;
+export default Technologies;

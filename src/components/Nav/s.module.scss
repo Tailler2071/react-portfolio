@@ -1,0 +1,47 @@
+.nav {
+  display: flex;
+}
+
+.left {
+  display: grid;
+  gap: 30px;
+  margin-right: 11px;
+
+  li {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+.line {
+  position: relative;
+  width: 2px;
+  height: 168px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toddler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28px;
+  width: 2px;
+  background-color: #FFFFFF;
+}
+
+.right {
+  margin-left: 8px;
+  display: grid;
+  gap: 30px;
+
+  li {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+.active {
+  text-decoration: underline;
+}

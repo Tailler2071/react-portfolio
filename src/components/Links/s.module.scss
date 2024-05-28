@@ -1,0 +1,59 @@
+@import "../../scss/utils";
+
+.list {
+  display: flex;
+  gap: vw(20px);
+
+  @include HD {
+    gap: vwh(20px);
+  }
+
+  @include Tablet {
+    gap: vwt(20px);
+  }
+
+  @include Mobile {
+    gap: vwm(20px);
+  }
+}
+
+.item {
+  a {
+    display: inline-block;
+
+    &:hover {
+      svg {
+        fill: #F4A949;
+
+        rect {
+          fill: #F4A949;
+        }
+      }
+    }
+  }
+
+  svg {
+    width: vw(32px);
+    height: vw(32px);
+    fill: #F0F8FF;
+
+    rect {
+      fill: #F0F8FF;
+    }
+
+    @include HD {
+      width: vwh(32px);
+      height: vwh(32px);
+    }
+
+    @include Tablet {
+      width: vwt(32px);
+      height: vwt(32px);
+    }
+
+    @include Mobile {
+      width: vwm(32px);
+      height: vwm(32px);
+    }
+  }
+}

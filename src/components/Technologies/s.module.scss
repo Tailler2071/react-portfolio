@@ -1,0 +1,88 @@
+@import "../../scss/utils";
+
+.wrapper {
+  padding: 40px 0;
+}
+
+.title {
+  margin-bottom: vw(16px);
+
+  @include HD {
+    margin-bottom: vwh(16px);
+  }
+
+  @include Tablet {
+    margin-bottom: vwt(16px);
+  }
+
+  @include Mobile {
+    margin-bottom: vwm(16px);
+  }
+}
+
+.text {
+  margin-bottom: 40px;
+}
+
+.skills {
+  display: grid;
+  gap: vw(40px);
+
+  @include HD {
+    gap: vwh(40px);
+  }
+
+  @include Tablet {
+    gap: vwt(40px);
+  }
+
+  @include Mobile {
+    gap: vwm(40px);
+  }
+}
+
+.list {
+  display: flex;
+  gap: vw(20px);
+
+  @include HD {
+    gap: vwh(20px);
+  }
+
+  @include Tablet {
+    gap: vwt(20px);
+  }
+
+  @include Mobile {
+    gap: vwm(20px);
+  }
+}
+
+
+.item {
+  display: grid;
+  justify-items: center;
+  gap: vw(12px);
+  min-width: 80px;
+
+  @include HD {
+    gap: vwh(12px);
+  }
+
+  @include Tablet {
+    gap: vwt(12px);
+  }
+
+  @include Mobile {
+    gap: vwm(12px);
+  }
+
+  svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

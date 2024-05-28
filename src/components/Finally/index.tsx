@@ -1,4 +1,4 @@
-const Contacts = () => {
+const Finally = () => {
     return (
         <div>
             Если у вас есть вопросы или вы просто хотите поздороваться, просто напишите мне на электронную почту!
@@ -6,4 +6,4 @@ const Contacts = () => {
     );
 };
 
-export default Contacts;
+export default Finally;

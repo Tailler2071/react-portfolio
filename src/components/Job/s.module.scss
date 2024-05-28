@@ -1,0 +1,40 @@
+@import "../../scss/utils";
+
+.card  {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  &:hover {
+    border: 1px solid #F0F8FF;
+  }
+}
+
+.dates {
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  svg {
+    stroke: #F0F8FF;
+  }
+}
+
+
+
+.job {
+
+}
