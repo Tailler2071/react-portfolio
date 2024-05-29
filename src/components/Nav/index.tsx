@@ -13,10 +13,18 @@ const Nav = () => {
                 <div className={s.toddler}></div>
             </div>
             <ul className={s.right}>
-                <li className={s.active}>Experience</li>
-                <li>Technologies and tools</li>
-                <li>Projects</li>
-                <li>And finally</li>
+                <li className={s.active}>
+                    <a href="#experience">Мой опыт</a>
+                </li>
+                <li>
+                    <a href="#tools">Технологии и инструменты</a>
+                </li>
+                <li>
+                    <a href="#projects">Проекты</a>
+                </li>
+                <li>
+                    <a href="#finaly">Что дальше?</a>
+                </li>
             </ul>
         </nav>
     );

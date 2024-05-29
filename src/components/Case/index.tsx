@@ -1,19 +1,17 @@
 import LinkLogo from "../../assets/svg/common/link.svg?react";
 import GitHubLogo from "../../assets/svg/portfolio/github.svg?react";
 import s from "./s.module.scss";
-import {ReactNode} from "react";
 
 type Props = {
     type: string;
     title: string;
     link: string;
-    children: ReactNode;
     technologies: string;
     gitLink?: string;
     img: string;
 }
 
-const Case = ({type, title, link, technologies, gitLink, children, img}: Props) => {
+const Case = ({type, title, link, technologies, gitLink,  img}: Props) => {
     return (
         <li className={s.card}>
             <div className={s.content}>
@@ -42,7 +40,6 @@ const Case = ({type, title, link, technologies, gitLink, children, img}: Props) 
                     <img src={img} alt=""/>
                 </div>
             </div>
-            {children}
         </li>
     );
 };

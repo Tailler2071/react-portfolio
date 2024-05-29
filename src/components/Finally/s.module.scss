@@ -1,0 +1,21 @@
+@import "../../scss/utils";
+
+.title {
+  margin-bottom: vw(16px);
+
+  @include HD {
+    margin-bottom: vwh(16px);
+  }
+
+  @include Tablet {
+    margin-bottom: vwt(16px);
+  }
+
+  @include Mobile {
+    margin-bottom: vwm(16px);
+  }
+}
+
+.text {
+  margin-bottom: 40px;
+}

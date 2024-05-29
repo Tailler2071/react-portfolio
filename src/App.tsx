@@ -8,6 +8,8 @@ import "./scss/index.scss";
 import s from "./app.module.scss";
 import Nav from "./components/Nav";
 import Links from "./components/Links";
+import Background from "./components/Background";
+import Footer from "./components/Footer";
 
 const App = () => {
 
@@ -17,7 +19,7 @@ const App = () => {
             <header className={s.header}>
                 <div>
                     <div className={s.info}>
-                        <h1 className={s.title}>Hi, I'm Aleksandr </h1>
+                        <h1 className={s.title}>Привет, я Александр </h1>
                         <p className={s.text}>Front End Developer</p>
                     </div>
                     <Nav/>
@@ -28,16 +30,24 @@ const App = () => {
                 <AboutUs/>
                 <Experience/>
                 <Technologies
-                    title={"Technologies and tools"}
-                    description={"The main area of expertise is front end development (client side of the web)."}
+                    title={"Технологии и инструменты"}
+                    description={"Основная облась специализации — FrontEnd  (клиентская часть веб-разработки). Я активно использую различные технологии, фреймворки и библиотеки для решения задач."}
                 />
                 <Projects
-                    title={"Projects"}
-                    description={"The main area of expertise is front end development (client side of the web)."}
+                    title={"Проекты"}
+                    description={"Небольшой список, заслуживающий внимания. Коммерческие и личные проекты в которых я принимал участие. "}
                 />
-                <Finally/>
+                <Finally
+                    title={"And finally"}
+                    description={"The main area of expertise is front"}
+                />
+                <Footer/>
             </main>
+
+            <Background/>
+
         </div>
+
     );
 };
 

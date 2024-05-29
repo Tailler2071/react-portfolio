@@ -4,16 +4,24 @@ const AboutUs = () => {
     return (
         <div className={s.about}>
             <p className={s.paragraph}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Однажды я познакомился с программированием и с головой окунулся в мир веб-разработки. Сейчас я
+                углубленно изучаю интересующие меня технологии и учусь в университете&nbsp;
+                <a href="https://tusur.ru/ru" target="_blank">ТУСУР</a>
+                &nbsp;по специальности "Бизнес-информатика".
             </p>
+            <p className={s.paragraph}>
+                Также я прошел несколько курсов, включая:
+            </p>
+            <ul className={s.paragraph}>
+                <li>- <a href="">ПГНИУ</a>  — Введение в web-разработку</li>
+                <li>- <a href="">ВШЭ</a> — Основы языка запросов SQL</li>
+                <li>- <a href="">Яндекс.Практикум </a>— Мидл фронтенд-разработчик</li>
+            </ul>
+
+
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
+                Когда я не за компьютером, люблю проводить время с друзьями, читать, путешествовать по разным городам
+                или смотреть хорошие сериалы.
             </p>
 
 

@@ -2,13 +2,19 @@
 
 html {
   height: 100%;
-  font-family: "Source Sans 3", sans-serif;
+  //font-family: "Source Sans 3", sans-serif;
+  font-family: "JetBrains Mono", sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
   font-size: vw(18px);
+  line-height: 1.5;
   color: #F0F8FF;
   background-color: var(--background);
+}
+
+#root {
+  position: relative;
 }
 
 h1 {

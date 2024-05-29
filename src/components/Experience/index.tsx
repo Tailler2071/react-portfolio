@@ -3,12 +3,13 @@ import s from "./s.module.scss";
 
 const Experience = () => {
     return (
-        <div className={s.wrapper}>
+        <div className={s.wrapper} id={"experience"}>
             <h2 className={s.title}>
-                Experience
+                Мой опыт
             </h2>
             <p className={s.text}>
-                The main area of expertise is front end development (client side of the web).
+                Компании, предоставившие мне возможность работать над разнообразными и увлекательными проектами,
+                подарившие мне новый опыт.
             </p>
 
             <ul className={s.cards}>

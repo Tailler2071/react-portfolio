@@ -26,7 +26,7 @@ type Props = {
 
 const Technologies = ({title, description}: Props) => {
     return (
-        <div className={s.wrapper}>
+        <div className={s.wrapper} id={"tools"}>
             <h2 className={s.title}>
                 {title}
             </h2>

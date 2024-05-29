@@ -1,6 +1,7 @@
 import rh from "../../assets/images/projects/rh.png";
 import domru from "../../assets/images/projects/domru.png";
 import memory from "../../assets/images/projects/memory.png";
+import ArrowIcon from "../../assets/svg/common/arrow.svg?react";
 import s from "./s.module.scss";
 import Case from "../Case";
 
@@ -11,7 +12,7 @@ type Props = {
 
 const Portfolio = ({title, description}: Props) => {
     return (
-        <div className={s.wrapper}>
+        <div className={s.wrapper} id={"projects"}>
             <h2 className={s.title}>
                 {title}
             </h2>
@@ -44,12 +45,13 @@ const Portfolio = ({title, description}: Props) => {
                 />
 
 
-
-
             </ul>
 
-            <a href={""} style={{marginTop: "40px", marginBottom: "100px"}}>
-                Show More
+            <a className={s.link} href={""} >
+                <div>
+                    Show More
+                </div>
+                <ArrowIcon/>
             </a>
         </div>
     );
