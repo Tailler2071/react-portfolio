@@ -11,6 +11,7 @@ const Finally = ({title, description}: FinallyProps) => {
         <Container
             title={title}
             description={description}
+            id={"finally"}
         >
             <p className={s.text}>
                 Всегда открыт для интересных предложений и проектов.

@@ -1,0 +1,66 @@
+@import "../../scss/utils";
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: vw(10px);
+
+  transition: background-color 0.3s linear;
+
+  @include HD {
+    gap: vwh(10px);
+  }
+
+  @include Tablet {
+    gap: vwt(10px);
+  }
+
+  @include Mobile {
+    gap: vwm(10px);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #2E9AFF;
+      transition: background-color 0.1s linear;
+
+      svg path:nth-child(2) {
+        transform: translate(2px, -2px);
+      }
+
+      svg path:nth-child(3) {
+        transform: translate(2px, -2px);
+      }
+    }
+  }
+
+  &:active {
+    background-color: #19548c;
+  }
+
+  svg {
+    stroke: var(--text-primary);
+    width: vw(24px);
+    height: vw(24px);
+
+    @include HD {
+      width: vwh(24px);
+      height: vwh(24px);
+    }
+
+    @include Tablet {
+      width: vwt(24px);
+      height: vwt(24px);
+    }
+
+    @include Mobile {
+      width: vwm(24px);
+      height: vwm(24px);
+    }
+
+  }
+
+  svg path {
+    transition: transform 0.1s linear;
+  }
+}

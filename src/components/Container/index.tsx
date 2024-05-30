@@ -5,11 +5,12 @@ interface ContainerProps {
     title: string;
     description: string;
     children: ReactNode;
+    id?: string;
 }
 
-const Container = ({children, title, description}: ContainerProps) => {
+const Container = ({children, title, description, id}: ContainerProps) => {
     return (
-        <section className={s.wrapper}>
+        <section className={s.wrapper} id={id}>
             <h2 className={s.title}>
                 {title}
             </h2>

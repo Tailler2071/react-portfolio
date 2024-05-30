@@ -9,27 +9,25 @@ interface ExperienceProps {
 
 const Experience = ({title, description}: ExperienceProps) => {
     return (
-        <Container title={title} description={description}>
+        <Container title={title} description={description} id={"experience"}>
             <ul className={s.cards}>
                 <Job
-                    dates={"Feb 2023 — May 2024"}
-                    post={"Front End Developer"}
+                    dates={"Фев 2023 — Май 2024"}
+                    post={"Front End разработчик"}
                     job={"Growtask"}
-                    link={""}
+                    link={"https://growtask.ru/"}
                     description={
-                        "Developed, maintained, and shipped production code for client websites. Clients included\n" +
-                        "Dom.ru, Lovesac, U.S. Cellular, U.S. Department of Defense, and more."
+                        "Верстка и разработка на JS, поддержка действующего кода. В число клиентов входят Dom.ru, RH store, Space line и др."
                     }
                 />
 
                 <Job
-                    dates={"Apr 2023 — Jun 2024"}
-                    post={"Student"}
+                    dates={"Апр 2023 — Июнь 2024"}
+                    post={"Студент"}
                     job={"Ya.practicum"}
-                    link={""}
+                    link={"https://practicum.yandex.ru"}
                     description={
-                        "Developed, maintained, and shipped production code for client websites. Clients included\n" +
-                        "Dom.ru, Lovesac, U.S. Cellular, U.S. Department of Defense, and more."
+                        "Разработка индивидуального проекта, работа в команде по созданию веб игры"
                     }
                 />
             </ul>

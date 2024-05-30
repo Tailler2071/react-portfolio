@@ -1,32 +1,19 @@
 @import "../../scss/utils";
 
-.wrapper {
-  padding: 40px 0;
-}
-
-
-.title {
-  margin-bottom: vw(16px);
+.cards {
+  display: grid;
+  gap: vw(40px);
 
   @include HD {
-    margin-bottom: vwh(16px);
+    gap: vwh(40px);
   }
 
   @include Tablet {
-    margin-bottom: vwt(16px);
+    gap: vwt(40px);
   }
 
   @include Mobile {
-    margin-bottom: vwm(16px);
+    gap: vwm(40px);
   }
-}
-
-.text {
-  margin-bottom: 40px;
-}
-
-.cards {
-  display: grid;
-  gap: 40px;
 }
 

@@ -1,45 +1,28 @@
 @import "../../scss/utils";
 
-.skills {
-  display: grid;
-  gap: vw(40px);
-
-  @include HD {
-    gap: vwh(40px);
-  }
-
-  @include Tablet {
-    gap: vwt(40px);
-  }
-
-  @include Mobile {
-    gap: vwm(40px);
-  }
-}
-
 .list {
-  display: flex;
-  gap: vw(20px);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: vw(40px) vw(20px);
 
   @include HD {
-    gap: vwh(20px);
+    gap: vwh(40px) vwh(20px);
   }
 
   @include Tablet {
-    gap: vwt(20px);
+    gap: vwt(40px) vwt(20px);
   }
 
   @include Mobile {
-    gap: vwm(20px);
+    gap: vwm(40px) vwm(20px);
   }
 }
-
 
 .item {
   display: grid;
   justify-items: center;
   gap: vw(12px);
-  min-width: 80px;
 
   @include HD {
     gap: vwh(12px);
@@ -54,11 +37,39 @@
   }
 
   svg {
-    width: 42px;
-    height: 42px;
+    width: vw(42px);
+    height: vw(42px);
+
+    @include HD {
+      width: vwh(42px);
+      height: vwh(42px);
+    }
+
+    @include Tablet {
+      width: vwt(42px);
+      height: vwt(42px);
+    }
+
+    @include Mobile {
+      width: vwm(42px);
+      height: vwm(42px);
+    }
   }
 
-  p {
-    font-size: 14px;
+  .name {
+    font-size: vw(14px);
+    white-space: nowrap;
+
+    @include HD {
+      font-size: vwh(14px);
+    }
+
+    @include Tablet {
+      font-size: vwt(14px);
+    }
+
+    @include Mobile {
+      font-size: vwm(14px);
+    }
   }
 }

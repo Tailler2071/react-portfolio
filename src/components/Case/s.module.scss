@@ -2,9 +2,9 @@
 
 .card {
   display: grid;
-  grid-template-columns: vw(320px) auto;
-  height: vw(320px);
-  padding: 20px;
+  grid-template-columns: vw(380px) auto;
+  gap: 20px;
+  padding: vw(20px);
   border-radius: 6px;
   border: 1px solid rgba(240, 248, 255, 0.13);
 
@@ -15,7 +15,9 @@
 
 .content {
   display: grid;
+  gap: 20px;
   align-content: space-between;
+  justify-items: start;
 }
 
 .type {
@@ -24,32 +26,46 @@
   margin-bottom: vw(10px);
 }
 
-.line {
-  display: flex;
-  gap: vw(10px);
-  margin-bottom: vw(10px);
-  cursor: pointer;
-
-  svg {
-    stroke: #F0F8FF;
-  }
-
-  &:hover {
-    color: #FF5E5E;
-
-    svg {
-      stroke: #FF5E5E;
-    }
-  }
+.description {
+  font-size: vw(16px);
 }
 
-.name {
-  font-size: vw(40px);
-  font-weight: 700;
+.link {
+  margin-bottom: 10px;
+}
+
+.git {
+  display: inline-flex;
+  margin-top: 20px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .technologies {
-  font-size: vw(18px);
+  display: inline-flex;
+  background-color: var(--text-primary);
+  color: #141416;
+  font-size: vw(14px);
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 8px;
+
+  @include HD {
+    font-size: vwh(14px);
+  }
+
+  @include Tablet {
+    font-size: vwt(14px);
+  }
+
+  @include Mobile {
+    font-size: vwm(14px);
+  }
+
 }
 
 .view {
@@ -60,7 +76,7 @@
 }
 
 .images {
-  width: 315px;
+  width: 100%;
   height: vw(280px);
 
   img {

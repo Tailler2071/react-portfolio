@@ -1,4 +1,4 @@
-import LinkLogo from "../../assets/svg/common/link.svg?react";
+import CardLink from "../CardLink";
 import s from "./s.module.scss";
 
 interface JobProps {
@@ -20,20 +20,11 @@ const Job = ({dates, post, job, link, description}: JobProps) => {
                     {post}
                 </div>
 
-                <a className={s.line} href={link} target={"_blank"}>
-                    <h3 className={s.job}>
-                        {job}
-                    </h3>
-                    <LinkLogo/>
-                </a>
-
+                <CardLink link={link} title={job} className={s.link}/>
                 <p>
                     {description}
                 </p>
-
-
             </div>
-
         </li>
     );
 };

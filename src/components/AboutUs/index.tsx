@@ -7,7 +7,9 @@ interface AboutUsProps {
 
 const AboutUs = ({className}: AboutUsProps) => {
     return (
-        <section className={cn(s.about, {}, [className])}>
+        <section
+            id={"about"}
+            className={cn(s.about, {}, [className])}>
             <p>
                 Однажды я познакомился с программированием и с головой окунулся в мир веб-разработки. Сейчас я
                 углубленно изучаю интересующие меня технологии и учусь в университете&nbsp;
