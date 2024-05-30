@@ -1,3 +1,4 @@
+import Container from "../Container";
 import s from "./s.module.scss";
 
 interface FinallyProps {
@@ -5,19 +6,19 @@ interface FinallyProps {
     description: string;
 }
 
-
 const Finally = ({title, description}: FinallyProps) => {
     return (
-        <div id={"finaly"}>
-            <h2 className={s.title}>
-                {title}
-            </h2>
+        <Container
+            title={title}
+            description={description}
+        >
             <p className={s.text}>
-                {description}
+                Всегда открыт для интересных предложений и проектов.
             </p>
-
-            Если у вас есть вопросы или вы просто хотите поздороваться, просто напишите мне на электронную почту!
-        </div>
+            <p>
+                Если есть вопросы или хотите поздороваться, пишите в Telegram или на почту. Обязательно отвечу!
+            </p>
+        </Container>
     );
 };
 

@@ -18,96 +18,90 @@ import GitLogo from "../../assets/svg/skills/git.svg?react";
 import SQLLogo from "../../assets/svg/skills/postgresql.svg?react";
 
 import s from "./s.module.scss";
+import Container from "../Container";
 
-type Props = {
+interface TechnologiesProps {
     title: string;
     description: string;
-};
+}
 
-const Technologies = ({title, description}: Props) => {
+const Technologies = ({title, description}: TechnologiesProps) => {
     return (
         <div className={s.wrapper} id={"tools"}>
-            <h2 className={s.title}>
-                {title}
-            </h2>
-            <p className={s.text}>
-                {description}
-            </p>
-
-            <div className={s.skills}>
-                <ul className={s.list}>
-                    <li className={s.item}>
-                        <HTMLLogo/>
-                        <p>HTML5</p>
-                    </li>
-                    <li className={s.item}>
-                        <CSSLogo/>
-                        <p>CSS3</p>
-                    </li>
-                    <li className={s.item}>
-                        <SCSSLogo/>
-                        <p>SCSS</p>
-                    </li>
-                    <li className={s.item}>
-                        <PostCSSLogo/>
-                        <p>PostCSS</p>
-                    </li>
-                    <li className={s.item}>
-                        <WebpackLogo/>
-                        <p>Webpack</p>
-                    </li>
-                    <li className={s.item}>
-                        <ViteLogo/>
-                        <p>Vite</p>
-                    </li>
-                    <li className={s.item}>
-                        <FigmaLogo/>
-                        <p>Figma</p>
-                    </li>
-                </ul>
-                <ul className={s.list}>
-                    <li className={s.item}>
-                        <JSLogo/>
-                        <p>JavaScript</p>
-                    </li>
-                    <li className={s.item}>
-                        <TSLogo/>
-                        <p>TypeScript</p>
-                    </li>
-                    <li className={s.item}>
-                        <ReactLogo/>
-                        <p>React</p>
-                    </li>
-                    <li className={s.item}>
-                        <NodeJStLogo/>
-                        <p>NodeJS</p>
-                    </li>
-                    <li className={s.item}>
-                        <JestLogo/>
-                        <p>Jest</p>
-                    </li>
-                    <li className={s.item}>
-                        <GitLogo/>
-                        <p>Git</p>
-                    </li>
-                    <li className={s.item}>
-                        <SQLLogo/>
-                        <p>PostgreSQL</p>
-                    </li>
-                </ul>
-                <ul className={s.list}>
-                    <li className={s.item}>
-                        <VSLogo/>
-                        <p>Visual Studio</p>
-                    </li>
-                    <li className={s.item}>
-                        <WSLogo/>
-                        <p>WebStorm</p>
-                    </li>
-
-
-                </ul>
-            </div>
+            <Container title={title} description={description}>
+                <div className={s.skills}>
+                    <ul className={s.list}>
+                        <li className={s.item}>
+                            <HTMLLogo/>
+                            <p>HTML5</p>
+                        </li>
+                        <li className={s.item}>
+                            <CSSLogo/>
+                            <p>CSS3</p>
+                        </li>
+                        <li className={s.item}>
+                            <SCSSLogo/>
+                            <p>SCSS</p>
+                        </li>
+                        <li className={s.item}>
+                            <PostCSSLogo/>
+                            <p>PostCSS</p>
+                        </li>
+                        <li className={s.item}>
+                            <WebpackLogo/>
+                            <p>Webpack</p>
+                        </li>
+                        <li className={s.item}>
+                            <ViteLogo/>
+                            <p>Vite</p>
+                        </li>
+                        <li className={s.item}>
+                            <FigmaLogo/>
+                            <p>Figma</p>
+                        </li>
+                    </ul>
+                    <ul className={s.list}>
+                        <li className={s.item}>
+                            <JSLogo/>
+                            <p>JavaScript</p>
+                        </li>
+                        <li className={s.item}>
+                            <TSLogo/>
+                            <p>TypeScript</p>
+                        </li>
+                        <li className={s.item}>
+                            <ReactLogo/>
+                            <p>React</p>
+                        </li>
+                        <li className={s.item}>
+                            <NodeJStLogo/>
+                            <p>NodeJS</p>
+                        </li>
+                        <li className={s.item}>
+                            <JestLogo/>
+                            <p>Jest</p>
+                        </li>
+                        <li className={s.item}>
+                            <GitLogo/>
+                            <p>Git</p>
+                        </li>
+                        <li className={s.item}>
+                            <SQLLogo/>
+                            <p>PostgreSQL</p>
+                        </li>
+                    </ul>
+                    <ul className={s.list}>
+                        <li className={s.item}>
+                            <VSLogo/>
+                            <p>Visual Studio</p>
+                        </li>
+                        <li className={s.item}>
+                            <WSLogo/>
+                            <p>WebStorm</p>
+                        </li>
+                    </ul>
+                </div>
+            </Container>
         </div>
     );
 };

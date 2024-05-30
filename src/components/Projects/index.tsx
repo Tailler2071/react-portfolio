@@ -4,6 +4,7 @@ import memory from "../../assets/images/projects/memory.png";
 import ArrowIcon from "../../assets/svg/common/arrow.svg?react";
 import s from "./s.module.scss";
 import Case from "../Case";
+import Container from "../Container";
 
 type Props = {
     title: string;
@@ -12,15 +13,7 @@ type Props = {
 
 const Portfolio = ({title, description}: Props) => {
     return (
-        <div className={s.wrapper} id={"projects"}>
-            <h2 className={s.title}>
-                {title}
-            </h2>
-            <p className={s.text}>
-                {description}
-            </p>
-
-
+        <Container title={title} description={description}>
             <ul className={s.cards}>
                 <Case
                     type={"Online Store"}
@@ -47,13 +40,14 @@ const Portfolio = ({title, description}: Props) => {
 
             </ul>
 
-            <a className={s.link} href={""} >
+            <a className={s.link} href={""}>
                 <div>
                     Show More
                 </div>
                 <ArrowIcon/>
             </a>
-        </div>
+        </Container>
+
     );
 };
 

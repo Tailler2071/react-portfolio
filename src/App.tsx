@@ -27,8 +27,13 @@ const App = () => {
                 <Links className={s.links}/>
             </header>
             <main className={s.main}>
-                <AboutUs/>
-                <Experience/>
+                <AboutUs className={s.about}/>
+                <Experience
+                    title={"Мой опыт"}
+                    description={
+                        "Компании, предоставившие мне возможность работать над разнообразными и увлекательными проектами,\n" +
+                        "подарившие мне новый опыт."}
+                />
                 <Technologies
                     title={"Технологии и инструменты"}
                     description={"Основная облась специализации — FrontEnd  (клиентская часть веб-разработки). Я активно использую различные технологии, фреймворки и библиотеки для решения задач."}
@@ -38,7 +43,7 @@ const App = () => {
                     description={"Небольшой список, заслуживающий внимания. Коммерческие и личные проекты в которых я принимал участие. "}
                 />
                 <Finally
-                    title={"And finally"}
+                    title={"Что дальше?"}
                     description={"The main area of expertise is front"}
                 />
                 <Footer/>

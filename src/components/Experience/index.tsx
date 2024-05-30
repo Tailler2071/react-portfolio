@@ -1,17 +1,15 @@
 import Job from "../Job";
 import s from "./s.module.scss";
+import Container from "../Container";
 
-const Experience = () => {
+interface ExperienceProps {
+    title: string;
+    description: string;
+}
+
+const Experience = ({title, description}: ExperienceProps) => {
     return (
-        <div className={s.wrapper} id={"experience"}>
-            <h2 className={s.title}>
-                Мой опыт
-            </h2>
-            <p className={s.text}>
-                Компании, предоставившие мне возможность работать над разнообразными и увлекательными проектами,
-                подарившие мне новый опыт.
-            </p>
-
+        <Container title={title} description={description}>
             <ul className={s.cards}>
                 <Job
                     dates={"Feb 2023 — May 2024"}
@@ -35,7 +33,7 @@ const Experience = () => {
                     }
                 />
             </ul>
-        </div>
+        </Container>
     );
 };
 

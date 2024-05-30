@@ -9,8 +9,20 @@ html {
   font-style: normal;
   font-size: vw(18px);
   line-height: 1.5;
-  color: #F0F8FF;
-  background-color: var(--background);
+  color: var(--text-primary);
+  background-color: var(--background-color);
+
+  @include HD {
+    font-size: vwh(18px);
+  }
+
+  @include Tablet {
+    font-size: vwt(18px);
+  }
+
+  @include Mobile {
+    font-size: vwm(18px);
+  }
 }
 
 #root {

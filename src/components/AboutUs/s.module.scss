@@ -1,18 +1,66 @@
+@import "../../scss/utils";
+
 .about {
-  max-width: 600px;
-  margin-bottom: 150px;
+  display: grid;
+  gap: vw(20px);
 
-  a {
-    color: #8b8e8f;
+  @include HD {
+    gap: vwh(20px);
   }
 
-  // #11b2b7
-
-  p, li {
-    font-size: 18px;
+  @include Tablet {
+    gap: vwt(20px);
   }
 
-  .paragraph {
-    margin-bottom: 20px;
+  @include Mobile {
+    gap: vwm(20px);
+  }
+}
+
+.link {
+  color: var(--link-color);
+}
+
+.item {
+  position: relative;
+  padding-left: vw(20px);
+
+  @include HD {
+    padding-left: vwh(20px);
+  }
+
+  @include Tablet {
+    padding-left: vwt(20px);
+  }
+
+  @include Mobile {
+    padding-left: vwm(20px);
+  }
+
+  &:before {
+    content: "";
+    width: vw(6px);
+    height: vw(6px);
+    border-radius: 50%;
+    background-color: var(--text-primary);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include HD {
+      width: vwh(6px);
+      height: vwh(6px);
+    }
+
+    @include Tablet {
+      width: vwt(6px);
+      height: vwt(6px);
+    }
+
+    @include Mobile {
+      width: vwm(6px);
+      height: vwm(6px);
+    }
   }
 }
