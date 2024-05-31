@@ -1,56 +1,74 @@
+import {useState} from "react";
 import {Link as LinkScroll} from "react-scroll";
 import s from "./s.module.scss";
-import {useEffect, useRef, useState} from "react";
 
 const options = {
-    duration: 400,
-    smooth: true,
+    duration: 300,
+    smooth: "linear",
     activeClass: s.active,
     spy: true,
+    hashSpy: true,
     offset: 0,
-    className: s.link
+    className: s.link,
+    isDynamic: true,
 };
+
+interface Link {
+    id: number;
+    link: string;
+    text: string;
+}
+
+const links: Link[] = [
+    {
+        id: 1,
+        link: "about",
+        text: "Обо мне",
+    },
+    {
+        id: 2,
+        link: "experience",
+        text: "Мой опыт",
+    },
+    {
+        id: 3,
+        link: "tools",
+        text: "Технологии и инструменты",
+    },
+    {
+        id: 4,
+        link: "projects",
+        text: "Проекты",
+    },
+    {
+        id: 4,
+        link: "finally",
+        text: "Что дальше?",
+    }
+];
+
+const positions: { [key: string]: number } = {};
+
+links.forEach((item, index) => {
+    positions[item.link] = index * 20;
+});
 
 
 const Nav = () => {
     const [usePosition, setPosition] = useState(0);
-    const [useHeight, setHeight] = useState(0);
-    const ref = useRef(null);
-
-    const handleSetActive = (to: string, element) => {
-        console.log(to, element);
-
-        const s4 = (((useHeight - 30) / 4) / useHeight) * 100;
 
 
-        console.log(((useHeight - 30) / 4) / useHeight);
-
-        if (to === "about") {
-            setPosition(0);
-        }
-        if (to === "experience") {
-            setPosition(s4);
-        }
-        if (to === "tools") {
-            setPosition(s4 * 2);
-        }
-        if (to === "projects") {
-            setPosition(s4 * 3);
-        }
-
-        if (to === "finally") {
-            setPosition(s4 * 4);
+    const handleSetActive = (to: string) => {
+        if (Object.prototype.hasOwnProperty.call(positions, to)) {
+            setPosition(positions[to]);
+        } else {
+            return;
         }
     };
 
-    useEffect(() => {
-        setHeight(ref.current ? ref.current.offsetHeight : 0);
-
-    }, [ref.current]);
-
     return (
         <nav className={s.nav}>
-            <ul className={s.left}>
+            <ul className={s.numbers}>
                 <li>00</li>
                 <li>01</li>
                 <li>02</li>
@@ -59,59 +77,23 @@ const Nav = () => {
             </ul>
             <div className={s.line}>
                 <div
-                    className={s.line2}
-                    style={{transform: `translateY(${usePosition}%)`}}
-                    ref={ref}
-                >
-                    <div className={s.toddler}></div>
+                    className={s.toddler}
+                    style={{top: `${usePosition}%`}}>
                 </div>
             </div>
             <ul className={s.right}>
-                <li>
-                    <LinkScroll
-                        to="about"
-                        onSetActive={handleSetActive}
-                        {...options}
-                    >
-                        Обо мне
-                    </LinkScroll>
-                </li>
-                <li>
-                    <LinkScroll
-                        to="experience"
-                        onSetActive={handleSetActive}
-                        {...options}
-                    >
-                        Мой опыт
-                    </LinkScroll>
-                </li>
-                <li>
-                    <LinkScroll
-                        to="tools"
-                        onSetActive={handleSetActive}
-                        {...options}
-                    >
-                        Технологии и инструменты
-                    </LinkScroll>
-                </li>
-                <li>
-                    <LinkScroll
-                        to="projects"
-                        onSetActive={handleSetActive}
-                        {...options}
-                    >
-                        Проекты
-                    </LinkScroll>
-                </li>
-                <li>
-                    <LinkScroll
-                        to="finally"
-                        onSetActive={handleSetActive}
-                        {...options}
-                    >
-                        Что дальше?
-                    </LinkScroll>
-                </li>
+                {links.map((item) => (
+                    <li>
+                        <LinkScroll
+                            key={item.id}
+                            to={item.link}
+                            onSetActive={handleSetActive}
+                            {...options}
+                        >
+                            {item.text}
+                        </LinkScroll>
+                    </li>
+                ))}
             </ul>
         </nav>
     );

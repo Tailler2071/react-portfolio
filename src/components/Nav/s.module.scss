@@ -1,70 +1,60 @@
+@import "../../scss/utils";
+
 .nav {
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: start;
 }
 
-.left {
+.numbers {
   display: grid;
-  gap: 30px;
-  margin-right: 11px;
+  margin-right: vw(11px);
 
   li {
-    font-size: 13px;
-    height: 30px;
+    font-size: vw(14px);
+    font-weight: 700;
+    height: vw(40px);
     display: inline-flex;
     align-items: center;
-    line-height: 16px;
+    justify-content: center;
   }
 }
 
 .line {
   position: relative;
-  width: 2px;
+  width: vw(2px);
   height: 100%;
-  //transform: translateY(-5%);
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.line2 {
-  transition: 0.2s ease;
-  position: absolute;
-  top: 0;
-  left: 3px;
-  height: 100%;
-  width: 1px;
-  background-color: #F4A949;
+  border-radius: vw(2px);
 }
 
 .toddler {
   position: absolute;
   top: 0;
   left: 0;
-  height: 28px;
-  width: 2px;
+  height: vw(40px);
+  width: vw(2px);
+  border-radius: vw(2px);
   background-color: #FFFFFF;
+  transition: top 0.2s linear;
 }
 
 .right {
-  margin-left: 8px;
+  margin-left: vw(15px);
   display: grid;
-  gap: 30px;
-
-  li {
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 13px;
-    line-height: 16px;
-  }
 }
 
 .link {
-  display: inline-flex;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: vw(14px);
+  font-weight: 700;
+  height: vw(40px);
   align-items: center;
-  transition: padding-left 0.2s ease;
-  height: 30px;
-}
+  display: inline-flex;
+  transition: all 0.1s ease;
 
-.active {
-
+  &:active {
+    text-shadow: 0 vw(3px) vw(13px) #c0c0c0;
+  }
 }
