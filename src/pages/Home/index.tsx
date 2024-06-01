@@ -1,4 +1,4 @@
-import s from "../../app.module.scss";
+import s from "./s.module.scss";
 import Nav from "../../components/Nav";
 import Links from "../../components/Links";
 import AboutUs from "../../components/AboutUs";
@@ -18,7 +18,11 @@ const Home = () => {
                 <header className={s.header}>
                     <div>
                         <div className={s.info}>
-                            <h1 className={s.title}>Привет, я Александр </h1>
+                            <h1 className={s.title}>
+                                <div className={s.hello}>Привет, я</div>
+                                <div className={s.name}>Александр</div>
+                                <div className={s.emoji}>&#128572;</div>
+                            </h1>
                             <p className={s.text}>Front End Developer</p>
                         </div>
                         <Nav/>

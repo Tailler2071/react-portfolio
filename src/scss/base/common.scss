@@ -2,14 +2,15 @@
 
 html {
   height: 100%;
-  //font-family: "Source Sans 3", sans-serif;
-  font-family: "JetBrains Mono", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
+ //font-family: "JetBrains Mono", sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
   font-size: vw(18px);
   line-height: 1.5;
   color: var(--text-primary);
+
   background-color: var(--background-color);
 
   @include HD {
@@ -30,12 +31,12 @@ html {
 }
 
 h1 {
-  font-size: vw(60px);
+  font-size: vw(56px);
   line-height: vw(54px);
   font-weight: bold;
 
   @include HD {
-    font-size: vwh(60px);
+    font-size: vwh(56px);
     line-height: vwh(54px);
   }
 

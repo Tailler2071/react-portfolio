@@ -24,7 +24,7 @@ const AboutUs = ({className}: AboutUsProps) => {
                     <a className={s.link} href="http://www.psu.ru/">ПГНИУ</a> — Введение в web-разработку
                 </li>
                 <li className={s.item}>
-                    <a className={s.link} href="https://perm.hse.ru/">ВШЭ</a> — Основы языка запросов SQL
+                    <a className={s.link} href="https://perm.hse.ru/">Высшая Школа Экономики</a> — Основы языка запросов SQL
                 </li>
                 <li className={s.item}>
                     <a className={s.link} href="https://practicum.yandex.ru/">Яндекс.Практикум </a>— Мидл фронтенд-разработчик

@@ -19,7 +19,15 @@
 }
 
 .link {
-  color: var(--link-color);
+  color: #FFB02E;
+
+  &:hover {
+    color: #FF822D;
+  }
+
+  &:active {
+    color: #FF6723;
+  }
 }
 
 .item {

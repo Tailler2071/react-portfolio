@@ -1,9 +1,10 @@
-@import "./scss/utils";
+@import "../../scss/utils";
 
 .wrapper {
   margin: 0 vw(250px);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 40px;
 
   @include HD {
     margin: 0 vwh(45px);
@@ -35,14 +36,31 @@
 }
 
 .title {
-  font-size: 60px;
-  line-height: 54px;
-  font-weight: bold;
-  margin-bottom: 32px;
+  display: grid;
+  grid-template-areas:
+    "hello emogi"
+    "name emogi";
+  gap: 0 vw(10px);
+  margin-bottom: vw(20px);
+}
+
+.hello {
+  grid-area: hello;
+}
+
+.name {
+  grid-area: name;
+}
+.emoji {
+  font-size: vw(65px);
+  grid-area: emogi;
+  align-self: end;
 }
 
 .text {
+  font-size: vw(20px);
   font-weight: lighter;
+
 }
 
 
