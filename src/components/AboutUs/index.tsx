@@ -1,5 +1,6 @@
 import cn from "../../utils/classNames.ts";
 import s from "./s.module.scss";
+import LinkLogo from "../../assets/svg/common/link-variant.svg?react";
 
 interface AboutUsProps {
     className?: string;
@@ -21,13 +22,16 @@ const AboutUs = ({className}: AboutUsProps) => {
             </p>
             <ul>
                 <li className={s.item}>
-                    <a className={s.link} href="http://www.psu.ru/">ПГНИУ</a> — Введение в web-разработку
+                    <LinkLogo/>
+                    <a className={s.link} href="http://www.psu.ru/">  ПГНИУ</a> — Введение в web-разработку
                 </li>
                 <li className={s.item}>
-                    <a className={s.link} href="https://perm.hse.ru/">Высшая Школа Экономики</a> — Основы языка запросов SQL
+                    <LinkLogo/>
+                    <a className={s.link} href="https://perm.hse.ru/"> Высшая Школа Экономики</a> — Основы языка запросов SQL
                 </li>
                 <li className={s.item}>
-                    <a className={s.link} href="https://practicum.yandex.ru/">Яндекс.Практикум </a>— Мидл фронтенд-разработчик
+                    <LinkLogo/>
+                    <a className={s.link} href="https://practicum.yandex.ru/"> Яндекс.Практикум </a>— Мидл фронтенд-разработчик
                 </li>
             </ul>
             <p>

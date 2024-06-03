@@ -11,6 +11,8 @@ const Experience = ({title, description}: ExperienceProps) => {
     return (
         <Container title={title} description={description} id={"experience"}>
             <ul className={s.cards}>
+
+
                 <Job
                     dates={"Фев 2023 — Май 2024"}
                     post={"Front End разработчик"}
@@ -30,6 +32,8 @@ const Experience = ({title, description}: ExperienceProps) => {
                         "Разработка индивидуального проекта, работа в команде по созданию веб игры"
                     }
                 />
+
+
             </ul>
         </Container>
     );

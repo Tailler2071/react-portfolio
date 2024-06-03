@@ -3,19 +3,22 @@
 .card {
   display: grid;
   grid-template-columns: vw(380px) auto;
-  gap: 20px;
+  gap: vw(20px);
   padding: vw(20px);
-  border-radius: 6px;
-  border: 1px solid rgba(240, 248, 255, 0.13);
+  border-radius: vw(8px);
+  border: vw(1px) solid rgba(240, 248, 255, 0.13);
+  transition: border 0.15s ease-in-out;
 
-  &:hover {
-    border: 1px solid rgba(240, 248, 255);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border: vw(1px) solid #F0F8FF;
+    }
   }
 }
 
 .content {
   display: grid;
-  gap: 20px;
+  gap: vw(20px);
   align-content: space-between;
   justify-items: start;
 }
@@ -31,28 +34,52 @@
 }
 
 .link {
-  margin-bottom: 10px;
+  margin-bottom: vw(10px);
 }
 
 .git {
   display: inline-flex;
-  margin-top: 20px;
+  margin-top: vw(20px);
+
+  svg {
+    transition: stroke 0.2s ease;
+    stroke: var(--text-primary);
+    width: vw(22px);
+    height: vw(22px);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg {
+        stroke: var(--link-color-hover);
+      }
+    }
+  }
+
+  &:active {
+    svg {
+      transition: stroke 0.1s ease;
+      stroke: var(--link-color-active);
+    }
+  }
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: vw(8px);
 }
 
 .technologies {
   display: inline-flex;
   background-color: var(--text-primary);
+  //background-color: rgba(140, 82, 10, 0.2);
   color: #141416;
+  //color: var(--link-color);
   font-size: vw(14px);
   font-weight: bold;
-  padding: 2px 5px;
-  border-radius: 8px;
+  padding: vw(2px) vw(6px);
+  border-radius: vw(8px);
 
   @include HD {
     font-size: vwh(14px);

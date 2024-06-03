@@ -39,18 +39,13 @@ const links: Link[] = [
         id: 4,
         link: "projects",
         text: "Проекты",
-    },
-    {
-        id: 4,
-        link: "finally",
-        text: "Что дальше?",
     }
 ];
 
 const positions: { [key: string]: number } = {};
 
 links.forEach((item, index) => {
-    positions[item.link] = index * 20;
+    positions[item.link] = index * 25;
 });
 
 
@@ -73,7 +68,6 @@ const Nav = () => {
                 <li>01</li>
                 <li>02</li>
                 <li>03</li>
-                <li>04</li>
             </ul>
             <div className={s.line}>
                 <div
@@ -83,9 +77,9 @@ const Nav = () => {
             </div>
             <ul className={s.right}>
                 {links.map((item) => (
-                    <li>
+                    <li key={item.id}>
                         <LinkScroll
-                            key={item.id}
+
                             to={item.link}
                             onSetActive={handleSetActive}
                             {...options}

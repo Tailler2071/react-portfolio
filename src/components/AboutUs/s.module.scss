@@ -1,7 +1,7 @@
 @import "../../scss/utils";
 
 .about {
-  padding-top: 160px;
+  padding: 160px 0 40px;
   display: grid;
   gap: vw(20px);
 
@@ -19,57 +19,36 @@
 }
 
 .link {
-  color: #FFB02E;
+  //text-decoration: underline;
+  font-weight: 700;
+  //color: var(--link-color);
+  transition: color 0.2s ease;
 
-  &:hover {
-    color: #FF822D;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--link-color-hover);
+    }
   }
 
   &:active {
-    color: #FF6723;
+    transition: color 0.1s ease;
+    color: var(--link-color-active);
   }
 }
 
 .item {
-  position: relative;
-  padding-left: vw(20px);
+  display: flex;
+  align-items: baseline;
+  gap: vw(10px);
 
-  @include HD {
-    padding-left: vwh(20px);
-  }
-
-  @include Tablet {
-    padding-left: vwt(20px);
-  }
-
-  @include Mobile {
-    padding-left: vwm(20px);
-  }
-
-  &:before {
-    content: "";
-    width: vw(6px);
-    height: vw(6px);
-    border-radius: 50%;
-    background-color: var(--text-primary);
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
-    @include HD {
-      width: vwh(6px);
-      height: vwh(6px);
-    }
-
-    @include Tablet {
-      width: vwt(6px);
-      height: vwt(6px);
-    }
-
-    @include Mobile {
-      width: vwm(6px);
-      height: vwm(6px);
-    }
+  svg {
+    width: vw(14px);
+    height: vw(14px);
   }
 }
+

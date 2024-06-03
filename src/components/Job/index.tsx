@@ -21,7 +21,7 @@ const Job = ({dates, post, job, link, description}: JobProps) => {
                 </div>
 
                 <CardLink link={link} title={job} className={s.link}/>
-                <p>
+                <p className={s.description}>
                     {description}
                 </p>
             </div>

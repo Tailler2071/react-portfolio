@@ -36,8 +36,11 @@ const Case = ({type, title, description, siteLink, technologies, gitLink, img}: 
                 <ul className={s.list}>
 
                     {
-                        technologies.map(item => (
-                            <p className={s.technologies}> {item} </p>
+                        technologies.map((item, index) => (
+                            <p
+                                className={s.technologies}
+                                key={index}
+                            > {item} </p>
                         ))
                     }
                 </ul>

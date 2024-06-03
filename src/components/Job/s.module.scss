@@ -3,17 +3,21 @@
 .card  {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 30px;
-  padding: 20px;
-  border: 1px solid transparent;
-  border-radius: 6px;
+  gap: vw(30px);
+  padding: vw(20px);
+  border: vw(1px) solid transparent;
+  border-radius: vw(8px);
+  transition: border-color 0.15s ease-in-out;
 
-  &:hover {
-    border: 1px solid #F0F8FF;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border: vw(1px) solid #F0F8FF;
+    }
   }
 }
 
 .dates {
+  padding-top: vw(3px);
   font-weight: lighter;
   font-size: 14px;
 }
@@ -24,4 +28,8 @@
 
 .link {
   margin-bottom: vw(10px);
+}
+
+.description {
+  font-size: vw(16px);
 }

@@ -22,25 +22,38 @@
 }
 
 .link {
+  color: var(--text-primary);
   display: inline-flex;
   align-items: center;
+  transition: color 0.2s ease;
+  gap: vw(5px);
 
   @media (any-hover: hover) {
     &:hover {
-      background-color: #2E9AFF;
-      transition: background-color 0.1s linear;
+      color: var(--link-color-hover);
 
       svg {
+        fill: var(--link-color-hover);
         transform: translateX(4px);
       }
     }
   }
 
   &:active {
-    background-color: #19548c;
+    transition: color 0.1s ease;
+    color: var(--link-color-active);
+
+    svg{
+      transition: fill 0.1s ease;
+
+      fill: var(--link-color-active);
+    }
   }
 
   svg {
-    transition: transform 0.2s linear;
+    fill: var(--text-primary);
+    transition: transform 0.2s linear, fill 0.2s ease;
+    width: vw(19px);
+    height: vw(30px);
   }
 }

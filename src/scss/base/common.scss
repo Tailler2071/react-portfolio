@@ -13,6 +13,10 @@ html {
 
   background-color: var(--background-color);
 
+  scrollbar-color: var(--text-primary) var(--background-color);
+  scrollbar-width: thin;
+
+
   @include HD {
     font-size: vwh(18px);
   }
@@ -24,6 +28,7 @@ html {
   @include Mobile {
     font-size: vwm(18px);
   }
+
 }
 
 #root {
@@ -52,22 +57,22 @@ h1 {
 }
 
 h2 {
-  font-size: vw(36px);
+  font-size: vw(42px);
   line-height: vw(54px);
   font-weight: bold;
 
   @include HD {
-    font-size: vwh(36px);
+    font-size: vwh(42px);
     line-height: vwh(54px);
   }
 
   @include Tablet {
-    font-size: vwt(36px);
+    font-size: vwt(42px);
     line-height: vwt(54px);
   }
 
   @include Mobile {
-    font-size: vwm(36px);
+    font-size: vwm(42px);
     line-height: vwm(54px);
   }
 }

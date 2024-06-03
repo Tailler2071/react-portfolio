@@ -4,8 +4,8 @@
   display: inline-flex;
   align-items: center;
   gap: vw(10px);
-
-  transition: background-color 0.3s linear;
+  //color: var(--link-color);
+  transition: color 0.2s ease;
 
   @include HD {
     gap: vwh(10px);
@@ -21,8 +21,11 @@
 
   @media (any-hover: hover) {
     &:hover {
-      background-color: #2E9AFF;
-      transition: background-color 0.1s linear;
+      color: var(--link-color-hover);
+
+      svg {
+        stroke: var(--link-color-hover);
+      }
 
       svg path:nth-child(2) {
         transform: translate(2px, -2px);
@@ -35,27 +38,36 @@
   }
 
   &:active {
-    background-color: #19548c;
+    transition: color 0.1s ease;
+    color: var(--link-color-active);
+
+    svg {
+      transition: stroke 0.1s ease;
+      stroke: var(--link-color-active);
+    }
   }
 
   svg {
+    transition: stroke 0.2s ease;
+   // stroke: var(--link-color);
     stroke: var(--text-primary);
-    width: vw(24px);
-    height: vw(24px);
+    width: vw(22px);
+    height: vw(22px);
+
 
     @include HD {
-      width: vwh(24px);
-      height: vwh(24px);
+      width: vwh(22px);
+      height: vwh(22px);
     }
 
     @include Tablet {
-      width: vwt(24px);
+      width: vwt(22px);
       height: vwt(24px);
     }
 
     @include Mobile {
-      width: vwm(24px);
-      height: vwm(24px);
+      width: vwm(22px);
+      height: vwm(22px);
     }
 
   }

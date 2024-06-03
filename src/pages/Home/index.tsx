@@ -8,6 +8,8 @@ import Projects from "../../components/Projects";
 import Finally from "../../components/Finally";
 import Footer from "../../components/Footer";
 import Background from "../../components/Background";
+import StringToSpans from "../../components/StringToSpans";
+
 
 const Home = () => {
 
@@ -19,8 +21,12 @@ const Home = () => {
                     <div>
                         <div className={s.info}>
                             <h1 className={s.title}>
-                                <div className={s.hello}>Привет, я</div>
-                                <div className={s.name}>Александр</div>
+                                <div className={s.hello}>
+                                  <StringToSpans text={"Привет, я"}/>
+                                </div>
+                                <div className={s.name}>
+                                    <StringToSpans text={"Александр"}/>
+                                </div>
                                 <div className={s.emoji}>&#128572;</div>
                             </h1>
                             <p className={s.text}>Front End Developer</p>
@@ -48,7 +54,7 @@ const Home = () => {
                 />
                 <Finally
                     title={"Что дальше?"}
-                    description={"The main area of expertise is front"}
+
                 />
                 <Footer/>
             </main>
