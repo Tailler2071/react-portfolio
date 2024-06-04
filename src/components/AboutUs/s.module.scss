@@ -1,33 +1,45 @@
 @import "../../scss/utils";
 
 .about {
-  padding: 160px 0 40px;
+  padding: vw(160px) 0 vw(40px);
   display: grid;
   gap: vw(20px);
 
   @include HD {
+    padding: vwh(140px) 0 vwh(20px);
     gap: vwh(20px);
   }
 
   @include Tablet {
+    padding: vwt(140px) 0 vwt(20px);
     gap: vwt(20px);
   }
 
   @include Mobile {
+    padding: vwm(140px) 0 vwm(20px);
     gap: vwm(20px);
   }
 }
 
 .link {
-  //text-decoration: underline;
   font-weight: 700;
-  //color: var(--link-color);
   transition: color 0.2s ease;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: vw(10px);
+
+  @include HD {
+    gap: vwh(10px);
+  }
+
+  @include Tablet {
+    gap: vwt(10px);
+  }
+
+  @include Mobile {
+    gap: vwm(10px);
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -46,9 +58,35 @@
   align-items: baseline;
   gap: vw(10px);
 
+  @include HD {
+    gap: vwh(10px);
+  }
+
+  @include Tablet {
+    gap: vwt(10px);
+  }
+
+  @include Mobile {
+    gap: vwm(10px);
+  }
+
   svg {
     width: vw(14px);
     height: vw(14px);
+
+    @include HD {
+      width: vwh(14px);
+      height: vwh(14px);
+    }
+
+    @include Tablet {
+      width: vwt(14px);
+      height: vwt(14px);
+    }
+
+    @include Mobile {
+      width: vwm(14px);
+      height: vwm(14px);
+    }
   }
 }
-

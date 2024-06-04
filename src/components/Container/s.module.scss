@@ -1,7 +1,19 @@
 @import "../../scss/utils";
 
 .wrapper {
-  padding: 160px 0 40px;
+  padding: vw(160px) 0 vw(40px);
+
+  @include HD {
+    padding: vwh(140px) 0 vwh(20px);
+  }
+
+  @include Tablet {
+    padding: vwt(140px) 0 vwt(20px);
+  }
+
+  @include Mobile {
+    padding: vwm(140px) 0 vwm(20px);
+  }
 }
 
 .title {
@@ -22,4 +34,16 @@
 
 .text {
   margin-bottom: vw(50px);
+
+  @include HD {
+    margin-bottom: vwh(50px);
+  }
+
+  @include Tablet {
+    margin-bottom: vwt(50px);
+  }
+
+  @include Mobile {
+    margin-bottom: vwm(50px);
+  }
 }

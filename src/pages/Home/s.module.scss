@@ -4,35 +4,63 @@
   margin: 0 vw(250px);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: vw(40px);
 
   @include HD {
     margin: 0 vwh(45px);
+    gap: vwh(40px);
   }
 
   @include Tablet {
     margin: 0 vwt(12x);
+    gap: vwt(40px);
   }
 
   @include Mobile {
     margin: 0 vwm(12px);
+    gap: vwm(40px);
   }
 }
 
 .header {
   position: fixed;
   top: 0;
-  padding-top: 160px;
-  padding-bottom: 100px;
+  padding: vw(160px) 0 vw(100px);
   height: 100vh;
   max-height: 100vh;
   display: grid;
   align-content: space-between;
-  gap: 50px;
+  gap: vw(50px);
+
+  @include HD {
+    padding: vwh(140px) 0 vwh(80px);
+    gap: vwh(50px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
+
 }
 
 .info {
-  margin-bottom: 90px;
+  margin-bottom: vw(90px);
+
+  @include HD {
+    margin-bottom: vwh(90px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
 }
 
 .title {
@@ -43,7 +71,18 @@
   gap: 0 vw(10px);
   margin-bottom: vw(20px);
 
+  @include HD {
+    gap: 0 vwh(10px);
+    margin-bottom: vwh(20px);
+  }
 
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
 }
 
 .hello {
@@ -53,35 +92,55 @@
 .name {
   grid-area: name;
 }
+
 .emoji {
   font-size: vw(65px);
   grid-area: emogi;
   align-self: end;
+
+  @include HD {
+    font-size: vwh(65px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
 }
 
 .text {
   font-size: vw(20px);
   font-weight: lighter;
 
+  @include HD {
+    font-size: vwh(20px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
 }
 
 
 .about {
-  max-width: 600px;
+  max-width: vw(600px);
 
-}
+  @include HD {
+    max-width: vwh(600px);
+  }
 
-.video {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @include Tablet {
 
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  }
+
+  @include Mobile {
+
   }
 }

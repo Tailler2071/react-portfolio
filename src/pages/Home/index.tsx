@@ -5,7 +5,6 @@ import AboutUs from "../../components/AboutUs";
 import Experience from "../../components/Experience";
 import Technologies from "../../components/Technologies";
 import Projects from "../../components/Projects";
-import Finally from "../../components/Finally";
 import Footer from "../../components/Footer";
 import Background from "../../components/Background";
 import StringToSpans from "../../components/StringToSpans";
@@ -22,7 +21,7 @@ const Home = () => {
                         <div className={s.info}>
                             <h1 className={s.title}>
                                 <div className={s.hello}>
-                                  <StringToSpans text={"Привет, я"}/>
+                                    <StringToSpans text={"Привет, я"}/>
                                 </div>
                                 <div className={s.name}>
                                     <StringToSpans text={"Александр"}/>
@@ -52,11 +51,7 @@ const Home = () => {
                     title={"Проекты"}
                     description={"Небольшой список, заслуживающий внимания. Коммерческие и личные проекты в которых я принимал участие. "}
                 />
-                <Finally
-                    title={"Что дальше?"}
-
-                />
-                <Footer/>
+                <Footer title={"Что дальше?"}/>
             </main>
 
             <Background/>

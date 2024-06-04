@@ -10,12 +10,9 @@ html {
   font-size: vw(18px);
   line-height: 1.5;
   color: var(--text-primary);
-
   background-color: var(--background-color);
-
   scrollbar-color: var(--text-primary) var(--background-color);
   scrollbar-width: thin;
-
 
   @include HD {
     font-size: vwh(18px);
@@ -28,7 +25,6 @@ html {
   @include Mobile {
     font-size: vwm(18px);
   }
-
 }
 
 #root {
@@ -46,12 +42,12 @@ h1 {
   }
 
   @include Tablet {
-    font-size: vwt(60px);
+    font-size: vwt(56px);
     line-height: vwt(54px);
   }
 
   @include Mobile {
-    font-size: vwm(60px);
+    font-size: vwm(56px);
     line-height: vwm(54px);
   }
 }

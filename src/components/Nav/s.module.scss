@@ -10,6 +10,19 @@
   display: grid;
   margin-right: vw(11px);
 
+  @include HD {
+    margin-right: vwh(11px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
+
+
   li {
     font-size: vw(13px);
     font-weight: 700;
@@ -17,6 +30,19 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    @include HD {
+      font-size: vwh(13px);
+      height: vwh(40px);
+    }
+
+    @include Tablet {
+
+    }
+
+    @include Mobile {
+
+    }
   }
 }
 
@@ -26,6 +52,20 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: vw(2px);
+
+  @include HD {
+    width: vwh(2px);
+    border-radius: vwh(2px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
+
 }
 
 .toddler {
@@ -37,11 +77,38 @@
   border-radius: vw(2px);
   background-color: #FFFFFF;
   transition: top 0.2s linear;
+
+  @include HD {
+    height: vwh(40px);
+    width: vwh(2px);
+    border-radius: vwh(2px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
+
 }
 
 .right {
   margin-left: vw(15px);
   display: grid;
+
+  @include HD {
+    margin-left: vwh(15px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
 }
 
 .link {
@@ -53,6 +120,20 @@
   align-items: center;
   display: inline-flex;
   transition: all 0.1s ease;
+
+  @include HD {
+    font-size: vwh(13px);
+    height: vwh(40px);
+  }
+
+  @include Tablet {
+
+  }
+
+  @include Mobile {
+
+  }
+
 
   &:active {
     text-shadow: 0 vw(3px) vw(13px) #c0c0c0;
