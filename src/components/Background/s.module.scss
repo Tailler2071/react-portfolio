@@ -4,17 +4,13 @@
   }
 }
 
-
-
 .background {
-  --background: #141416;
-
   position: fixed;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  background: var(--background);
+  background: var(--background-color);
   overflow: hidden;
   z-index: -2;
 }

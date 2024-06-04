@@ -23,7 +23,7 @@ html {
   }
 
   @include Mobile {
-    font-size: vwm(18px);
+    font-size: vwm(16px);
   }
 }
 
@@ -42,13 +42,13 @@ h1 {
   }
 
   @include Tablet {
-    font-size: vwt(56px);
-    line-height: vwt(54px);
+    font-size: vwt(42px);
+    line-height: vwt(48px);
   }
 
   @include Mobile {
-    font-size: vwm(56px);
-    line-height: vwm(54px);
+    font-size: vwm(42px);
+    line-height: vwm(48px);
   }
 }
 
@@ -63,13 +63,13 @@ h2 {
   }
 
   @include Tablet {
-    font-size: vwt(42px);
-    line-height: vwt(54px);
+    font-size: vwt(30px);
+    line-height: vwt(38px);
   }
 
   @include Mobile {
-    font-size: vwm(42px);
-    line-height: vwm(54px);
+    font-size: vwm(28px);
+    line-height: vwm(36px);
   }
 }
 
@@ -84,12 +84,12 @@ h3 {
   }
 
   @include Tablet {
-    font-size: vwt(28px);
-    line-height: vwt(36px);
+    font-size: vwt(24px);
+    line-height: vwt(32px);
   }
 
   @include Mobile {
-    font-size: vwm(28px);
-    line-height: vwm(36px);
+    font-size: vwm(20px);
+    line-height: vwm(30px);
   }
 }

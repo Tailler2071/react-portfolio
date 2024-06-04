@@ -12,12 +12,13 @@
   }
 
   @include Tablet {
-    margin: 0 vwt(12x);
+    grid-template-columns: 1fr;
+    margin: 0 vwt(24x);
     gap: vwt(40px);
   }
 
   @include Mobile {
-    margin: 0 vwm(12px);
+    margin: 0 vwm(24px);
     gap: vwm(40px);
   }
 }
@@ -38,13 +39,19 @@
   }
 
   @include Tablet {
-
+    position: static;
+    height: auto;
+    max-height: none;
+    justify-content: start;
+    padding: vwt(80px) 0 vwt(20px);
+    gap: vwt(100px);
   }
 
   @include Mobile {
-
+    padding: vwm(80px) 0 vwm(20px);
+    gap: vwm(30px);
+    justify-content: stretch;
   }
-
 }
 
 .info {
@@ -55,11 +62,7 @@
   }
 
   @include Tablet {
-
-  }
-
-  @include Mobile {
-
+    margin-bottom: 0;
   }
 }
 
@@ -77,11 +80,19 @@
   }
 
   @include Tablet {
-
+    gap: 0 vwt(10px);
+    margin-bottom: vwt(10px);
+    grid-template-areas:
+    "hello name emogi";
   }
 
   @include Mobile {
-
+    gap: 0 vwm(10px);
+    margin-bottom: vwm(20px);
+    grid-template-areas:
+    "hello emogi"
+    "name emogi";
+    width: 100%;
   }
 }
 
@@ -94,20 +105,21 @@
 }
 
 .emoji {
-  font-size: vw(65px);
+  font-size: vw(56px);
   grid-area: emogi;
   align-self: end;
 
   @include HD {
-    font-size: vwh(65px);
+    font-size: vwh(56px);
   }
 
   @include Tablet {
-
+    font-size: vwt(42px);
   }
 
   @include Mobile {
-
+    align-self: center;
+    font-size: vwm(54px);
   }
 }
 
@@ -120,11 +132,11 @@
   }
 
   @include Tablet {
-
+    font-size: vwt(18px);
   }
 
   @include Mobile {
-
+    font-size: vwm(18px);
   }
 }
 
@@ -137,10 +149,13 @@
   }
 
   @include Tablet {
-
+    max-width: 100%;
   }
+}
+
+.technologies h2 {
 
   @include Mobile {
-
+    max-width: vwm(190px);
   }
 }

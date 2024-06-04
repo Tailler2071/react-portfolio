@@ -4,6 +4,10 @@
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: start;
+
+  @include Tablet {
+   display: none;
+  }
 }
 
 .numbers {
@@ -13,15 +17,6 @@
   @include HD {
     margin-right: vwh(11px);
   }
-
-  @include Tablet {
-
-  }
-
-  @include Mobile {
-
-  }
-
 
   li {
     font-size: vw(13px);
@@ -34,14 +29,6 @@
     @include HD {
       font-size: vwh(13px);
       height: vwh(40px);
-    }
-
-    @include Tablet {
-
-    }
-
-    @include Mobile {
-
     }
   }
 }
@@ -57,15 +44,6 @@
     width: vwh(2px);
     border-radius: vwh(2px);
   }
-
-  @include Tablet {
-
-  }
-
-  @include Mobile {
-
-  }
-
 }
 
 .toddler {
@@ -83,15 +61,6 @@
     width: vwh(2px);
     border-radius: vwh(2px);
   }
-
-  @include Tablet {
-
-  }
-
-  @include Mobile {
-
-  }
-
 }
 
 .right {
@@ -100,14 +69,6 @@
 
   @include HD {
     margin-left: vwh(15px);
-  }
-
-  @include Tablet {
-
-  }
-
-  @include Mobile {
-
   }
 }
 
@@ -125,15 +86,6 @@
     font-size: vwh(13px);
     height: vwh(40px);
   }
-
-  @include Tablet {
-
-  }
-
-  @include Mobile {
-
-  }
-
 
   &:active {
     text-shadow: 0 vw(3px) vw(13px) #c0c0c0;

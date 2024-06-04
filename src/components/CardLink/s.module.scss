@@ -4,7 +4,6 @@
   display: inline-flex;
   align-items: center;
   gap: vw(10px);
-  //color: var(--link-color);
   transition: color 0.2s ease;
 
   @include HD {
@@ -12,11 +11,11 @@
   }
 
   @include Tablet {
-    gap: vwt(10px);
+    gap: vwt(8px);
   }
 
   @include Mobile {
-    gap: vwm(10px);
+    gap: vwm(8px);
   }
 
   @media (any-hover: hover) {
@@ -49,11 +48,9 @@
 
   svg {
     transition: stroke 0.2s ease;
-   // stroke: var(--link-color);
     stroke: var(--text-primary);
     width: vw(22px);
     height: vw(22px);
-
 
     @include HD {
       width: vwh(22px);
@@ -61,18 +58,24 @@
     }
 
     @include Tablet {
-      width: vwt(22px);
-      height: vwt(24px);
+      width: vwt(18px);
+      height: vwt(18px);
     }
 
     @include Mobile {
-      width: vwm(22px);
-      height: vwm(22px);
+      width: vwm(18px);
+      height: vwm(18px);
     }
 
   }
 
   svg path {
     transition: transform 0.1s linear;
+  }
+}
+
+.job {
+  @include Mobile {
+    margin-top: vwm(4px);
   }
 }

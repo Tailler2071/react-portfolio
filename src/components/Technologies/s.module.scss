@@ -11,11 +11,15 @@
   }
 
   @include Tablet {
-    gap: vwt(40px) vwt(20px);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: vwt(30px);
   }
 
   @include Mobile {
-    gap: vwm(40px) vwm(20px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: vwm(20px) vwm(10px);
   }
 }
 
@@ -46,13 +50,13 @@
     }
 
     @include Tablet {
-      width: vwt(42px);
-      height: vwt(42px);
+      width: vwt(36px);
+      height: vwt(36px);
     }
 
     @include Mobile {
-      width: vwm(42px);
-      height: vwm(42px);
+      width: vwm(32px);
+      height: vwm(32px);
     }
   }
 
@@ -69,7 +73,7 @@
     }
 
     @include Mobile {
-      font-size: vwm(16px);
+      font-size: vwm(14px);
     }
   }
 }

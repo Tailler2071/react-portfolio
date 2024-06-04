@@ -9,11 +9,11 @@
   }
 
   @include Tablet {
-    gap: vwt(20px);
+    gap: vwt(12px);
   }
 
   @include Mobile {
-    gap: vwm(20px);
+    gap: vwm(12px);
   }
 }
 
@@ -64,13 +64,13 @@
     }
 
     @include Tablet {
-      width: vwt(32px);
-      height: vwt(32px);
+      width: vwt(28px);
+      height: vwt(28px);
     }
 
     @include Mobile {
-      width: vwm(32px);
-      height: vwm(32px);
+      width: vwm(28px);
+      height: vwm(28px);
     }
   }
 }

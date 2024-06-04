@@ -17,11 +17,15 @@
   }
 
   @include Tablet {
-
+    border-radius: 0;
+    gap: vwt(30px);
+    padding: 0;
+    border: none;
   }
 
   @include Mobile {
-
+    grid-template-columns: 1fr;
+    gap: vwm(10px);
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -33,11 +37,7 @@
       }
 
       @include Tablet {
-        border: vwt(1px) solid #F0F8FF;
-      }
-
-      @include Mobile {
-        border: vwm(1px) solid #F0F8FF;
+        border: none;
       }
     }
   }

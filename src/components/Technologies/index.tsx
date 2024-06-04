@@ -23,12 +23,13 @@ import s from "./s.module.scss";
 interface TechnologiesProps {
     title: string;
     description: string;
+    className?: string;
 }
 
-const Technologies = ({title, description}: TechnologiesProps) => {
+const Technologies = ({title, description, className}: TechnologiesProps) => {
     return (
 
-        <Container title={title} description={description} id={"tools"}>
+        <Container title={title} description={description} id={"tools"} className={className}>
             <ul className={s.list}>
                 <li className={s.item}>
                     <HTMLLogo/>
