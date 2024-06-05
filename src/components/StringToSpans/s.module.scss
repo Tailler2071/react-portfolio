@@ -4,7 +4,7 @@
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       cursor: default;
-      color: var(--text-secondary);
+      color: var(--link-color-hover);
       animation: rubberBand;
       animation-duration: 1s;
     }

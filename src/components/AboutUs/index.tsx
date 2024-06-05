@@ -1,7 +1,8 @@
-import cn from "../../utils/classNames.ts";
-import s from "./s.module.scss";
 import LinkLogo from "../../assets/svg/common/link-variant.svg?react";
 import StringToSpans from "../StringToSpans";
+import courses from "../../config/courses.ts";
+import cn from "../../utils/classNames.ts";
+import s from "./s.module.scss";
 
 interface AboutUsProps {
     className?: string;
@@ -9,14 +10,10 @@ interface AboutUsProps {
 
 const AboutUs = ({className}: AboutUsProps) => {
     return (
-        <section
-            id={"about"}
-            className={cn(s.about, {}, [className])}
-        >
+        <section id={"about"} className={cn(s.about, {}, [className])}>
             <h2 className={s.title}>
                 <StringToSpans text={"Обо мне"}/>
             </h2>
-
             <div className={s.content}>
                 <p>
                     Однажды я познакомился с программированием и с головой окунулся в мир веб-разработки. Сейчас я
@@ -24,39 +21,22 @@ const AboutUs = ({className}: AboutUsProps) => {
                     <a className={s.link} href="https://tusur.ru/ru" target="_blank">ТУСУР</a>
                     &nbsp;по специальности "Бизнес-информатика".
                 </p>
-                <p>
-                    Также я прошел несколько курсов, включая:
-                </p>
+                <p>Также я прошел несколько курсов, включая:</p>
                 <ul className={s.list}>
-                    <li className={s.item}>
-                        <LinkLogo/>
-                        <span>
-                            <a className={s.link} href="http://www.psu.ru/"> ПГНИУ</a> — Введение в web-разработку
-                        </span>
-                    </li>
-                    <li className={s.item}>
-                        <LinkLogo/>
-                        <span>
-                            <a className={s.link} href="https://perm.hse.ru/"> Высшая Школа Экономики</a> — Основы языка
-                            запросов SQL
-                        </span>
-                    </li>
-                    <li className={s.item}>
-                        <LinkLogo/>
-                        <span>
-                            <a className={s.link} href="https://practicum.yandex.ru/"> Яндекс.Практикум </a>— Мидл
-                            фронтенд-разработчик
-                        </span>
-                    </li>
+                    {courses.map(course => (
+                        <li className={s.item} key={course.id}>
+                            <LinkLogo/>
+                            <span>
+                                <a className={s.link} href={course.link}>{course.name}</a> — {course.description}
+                            </span>
+                        </li>
+                    ))}
                 </ul>
                 <p>
                     Когда я не за компьютером, люблю проводить время с друзьями, читать, путешествовать по разным
-                    городам
-                    или смотреть хорошие сериалы.
+                    городам или смотреть хорошие сериалы.
                 </p>
             </div>
-
-
         </section>
     );
 };

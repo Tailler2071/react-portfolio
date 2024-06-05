@@ -1,0 +1,85 @@
+@import "../../scss/utils";
+
+.table {
+  display: grid;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 20px 0;
+  backdrop-filter: blur(8px);
+  font-weight: 700;
+}
+
+.header, .row {
+  display: grid;
+  grid-template-columns: 65px 350px 150px 370px 100px;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.row {
+  padding: 20px 0;
+  border-bottom: vw(1px) solid rgba(240, 248, 255, 0.13);
+}
+
+.row:first-child {
+  border-top: vw(1px) solid rgba(240, 248, 255, 0.13);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+
+.year {
+  font-weight: 300;
+}
+
+.project {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.made {
+  font-weight: 300;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: vw(10px);
+}
+
+.links {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.link {
+  padding: 4px;
+}
+
+
+.git, .website {
+  width: vw(30px);
+  height: vw(30px);
+  fill: var(--text-primary);
+
+  @include HD {
+    width: vwh(30px);
+    height: vwh(30px);
+  }
+
+  @include Tablet {
+    width: vwt(30px);
+    height: vwt(28px);
+  }
+
+  @include Mobile {
+    width: vwm(30px);
+    height: vwm(28px);
+  }
+}

@@ -33,7 +33,6 @@
     border: vwm(1px) solid rgba(240, 248, 255, 0.13);
   }
 
-
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       border: vw(1px) solid #F0F8FF;
@@ -189,35 +188,8 @@
   }
 
   @include Mobile {
+    display: none;
     gap: vwm(8px);
-  }
-}
-
-.technologies {
-  display: inline-flex;
-  background-color: var(--text-primary);
-  color: #141416;
-  font-size: vw(14px);
-  font-weight: bold;
-  padding: vw(2px) vw(6px);
-  border-radius: vw(8px);
-
-  @include HD {
-    font-size: vwh(14px);
-    padding: vwh(2px) vwh(6px);
-    border-radius: vwh(8px);
-  }
-
-  @include Tablet {
-    font-size: vwt(14px);
-    padding: vwt(2px) vwt(6px);
-    border-radius: vwt(8px);
-  }
-
-  @include Mobile {
-    font-size: vwm(14px);
-    padding: vwm(2px) vwm(6px);
-    border-radius: vwm(8px);
   }
 }
 
@@ -226,6 +198,11 @@
   display: grid;
   align-items: end;
   justify-content: end;
+
+  @include Mobile {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .images {
@@ -241,7 +218,7 @@
   }
 
   @include Mobile {
-    height: vwm(240px);
+    height: vwm(160px);
   }
 
   img {

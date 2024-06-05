@@ -14,7 +14,6 @@
   @include Mobile {
     padding: vwm(40px) 0 vwm(40px);
   }
-
 }
 
 .title {
@@ -83,7 +82,6 @@
   }
 }
 
-
 .email {
   font-size: vw(28px);
   font-weight: 700;
@@ -113,14 +111,12 @@
   }
 }
 
-
 .image {
   animation-name: space;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   position: absolute;
-
   z-index: -1;
   top: vw(30px);
   right: vw(50px);

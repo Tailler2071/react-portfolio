@@ -21,8 +21,20 @@
   a {
     display: inline-block;
     position: relative;
-    margin: 4px;
+    margin: vw(4px);
     transition: transform 0.2s ease-in;
+
+    @include HD {
+      margin: vwh(4px);
+    }
+
+    @include Tablet {
+      margin: vwt(4px);
+    }
+
+    @include Mobile {
+      margin: vwm(4px);
+    }
 
     &:before {
       position: absolute;
@@ -34,16 +46,45 @@
       border-radius: 50%;
       width: vw(30px);
       height: vw(30px);
+
+      @include HD {
+        width: vwh(30px);
+        height: vwh(30px);
+      }
+
+      @include Tablet {
+        width: vwt(26px);
+        height: vwt(26px);
+      }
+
+      @include Mobile {
+        width: vwm(26px);
+        height: vwm(26px);
+      }
     }
 
-    &:hover {
-      transform: scale(1.1);
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     &:active {
       &:before {
-        box-shadow: 0 1px 9px 1px #c0c0c0;
+        box-shadow: 0 vw(1px) vw(9px) vw(1px) #c0c0c0;
         transition: all 0.1s ease;
+
+        @include HD {
+          box-shadow: 0 vwh(1px) vwh(9px) vwh(1px) #c0c0c0;
+        }
+
+        @include Tablet {
+          box-shadow: 0 vwt(1px) vwt(9px) vwt(1px) #c0c0c0;
+        }
+
+        @include Mobile {
+          box-shadow: 0 vwm(1px) vwm(9px) vwm(1px) #c0c0c0;
+        }
       }
     }
   }
@@ -52,11 +93,6 @@
     width: vw(32px);
     height: vw(32px);
     fill: #F0F8FF;
-    transition: padding 0.2s ease-in-out;
-
-    rect {
-      fill: #F0F8FF;
-    }
 
     @include HD {
       width: vwh(32px);
@@ -71,6 +107,10 @@
     @include Mobile {
       width: vwm(28px);
       height: vwm(28px);
+    }
+
+    rect {
+      fill: #F0F8FF;
     }
   }
 }

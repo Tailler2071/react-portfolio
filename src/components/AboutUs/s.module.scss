@@ -82,14 +82,9 @@
 .list {
   display: grid;
 
-  @include Tablet {
-
-  }
-
   @include Mobile {
     gap: vwm(10px);
   }
-
 }
 
 .item {

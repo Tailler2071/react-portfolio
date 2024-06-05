@@ -6,13 +6,11 @@ interface StringToSpansProps {
 }
 
 const StringToSpans = ({text}: StringToSpansProps) => {
-    const spans = text.split("").map((char, index) => (
+    return text.split("").map((char, index) => (
         <React.Fragment key={index}>
             {char === " " ? <span>&nbsp;</span> : <span className={s.char}>{char}</span>}
         </React.Fragment>
     ));
-
-    return <>{spans}</>;
 };
 
 export default StringToSpans;

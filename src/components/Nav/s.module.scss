@@ -6,7 +6,7 @@
   justify-content: start;
 
   @include Tablet {
-   display: none;
+    display: none;
   }
 }
 
@@ -89,5 +89,9 @@
 
   &:active {
     text-shadow: 0 vw(3px) vw(13px) #c0c0c0;
+
+    @include HD {
+      text-shadow: 0 vwh(3px) vwh(13px) #c0c0c0;
+    }
   }
 }

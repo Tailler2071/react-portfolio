@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {Link as LinkScroll} from "react-scroll";
 import s from "./s.module.scss";
+import navigationLinks from "../../config/navigationLinks.ts";
 
 const options = {
     duration: 300,
@@ -13,45 +14,15 @@ const options = {
     isDynamic: true,
 };
 
-interface Link {
-    id: number;
-    link: string;
-    text: string;
-}
-
-const links: Link[] = [
-    {
-        id: 1,
-        link: "about",
-        text: "Обо мне",
-    },
-    {
-        id: 2,
-        link: "experience",
-        text: "Мой опыт",
-    },
-    {
-        id: 3,
-        link: "tools",
-        text: "Технологии и инструменты",
-    },
-    {
-        id: 4,
-        link: "projects",
-        text: "Проекты",
-    }
-];
-
 const positions: { [key: string]: number } = {};
 
-links.forEach((item, index) => {
+navigationLinks.forEach((item, index) => {
     positions[item.link] = index * 25;
 });
 
 
 const Nav = () => {
     const [usePosition, setPosition] = useState(0);
-
 
     const handleSetActive = (to: string) => {
         if (Object.prototype.hasOwnProperty.call(positions, to)) {
@@ -76,10 +47,9 @@ const Nav = () => {
                 </div>
             </div>
             <ul className={s.right}>
-                {links.map((item) => (
+                {navigationLinks.map((item) => (
                     <li key={item.id}>
                         <LinkScroll
-
                             to={item.link}
                             onSetActive={handleSetActive}
                             {...options}

@@ -1,0 +1,29 @@
+@import "../../scss/utils";
+
+.badge {
+  display: inline-flex;
+  background-color: var(--text-primary);
+  color: #141416;
+  font-size: vw(14px);
+  font-weight: bold;
+  padding: vw(2px) vw(6px);
+  border-radius: vw(8px);
+
+  @include HD {
+    font-size: vwh(14px);
+    padding: vwh(2px) vwh(6px);
+    border-radius: vwh(8px);
+  }
+
+  @include Tablet {
+    font-size: vwt(14px);
+    padding: vwt(2px) vwt(6px);
+    border-radius: vwt(8px);
+  }
+
+  @include Mobile {
+    font-size: vwm(14px);
+    padding: vwm(2px) vwm(6px);
+    border-radius: vwm(8px);
+  }
+}

@@ -1,7 +1,7 @@
 import {ReactNode} from "react";
-import s from "./s.module.scss";
 import StringToSpans from "../StringToSpans";
 import cn from "../../utils/classNames.ts";
+import s from "./s.module.scss";
 
 interface ContainerProps {
     title: string;
@@ -17,11 +17,7 @@ const Container = ({children, title, description, id, className}: ContainerProps
             <h2 className={s.title}>
                 <StringToSpans text={title}/>
             </h2>
-            {description && (
-                <p className={s.text}>
-                    {description}
-                </p>
-            )}
+            {description && <p className={s.text}> {description} </p>}
             {children}
         </section>
     );

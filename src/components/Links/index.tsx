@@ -27,7 +27,6 @@ const Links = ({className}: LinksProps) => {
                     <MailLogo/>
                 </a>
             </li>
-
         </ul>
     );
 };

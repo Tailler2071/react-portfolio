@@ -1,4 +1,3 @@
-import s from "./s.module.scss";
 import Nav from "../../components/Nav";
 import Links from "../../components/Links";
 import AboutUs from "../../components/AboutUs";
@@ -8,11 +7,9 @@ import Projects from "../../components/Projects";
 import Footer from "../../components/Footer";
 import Background from "../../components/Background";
 import StringToSpans from "../../components/StringToSpans";
-
+import s from "./s.module.scss";
 
 const Home = () => {
-
-
     return (
         <div className={s.wrapper}>
             <div>
@@ -54,9 +51,7 @@ const Home = () => {
                 />
                 <Footer title={"Что дальше?"}/>
             </main>
-
             <Background/>
-
         </div>
     );
 };

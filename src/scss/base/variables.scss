@@ -1,10 +1,13 @@
 :root {
+  // background
   --background-color: #141416;
+  --background-primary-stars: #bfbfc0;
+  --background-secondary-stars: #35434b;
+
+  // text
   --text-primary: #ECEEFF;
-  --text-secondary: #FFB02E;
-  --link-color: var(--text-secondary);
-  //--link-color-hover: #FF822D;
-  --link-color-hover: var(--text-secondary);
-  //--link-color-active: #FF6723;
+
+  // link
+  --link-color-hover: #FFB02E;
   --link-color-active: #FF822D;
 }

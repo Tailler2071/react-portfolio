@@ -27,11 +27,35 @@
       }
 
       svg path:nth-child(2) {
-        transform: translate(2px, -2px);
+        transform: translate(vw(2px), vw(-2px));
+
+        @include HD {
+          transform: translate(vwh(2px), vwh(-2px));
+        }
+
+        @include Tablet {
+          transform: translate(vwt(2px), vwt(-2px));
+        }
+
+        @include Mobile {
+          transform: translate(vwm(2px), vwm(-2px));
+        }
       }
 
       svg path:nth-child(3) {
-        transform: translate(2px, -2px);
+        transform: translate(vw(2px), vw(-2px));
+
+        @include HD {
+          transform: translate(vwh(2px), vwh(-2px));
+        }
+
+        @include Tablet {
+          transform: translate(vwt(2px), vwt(-2px));
+        }
+
+        @include Mobile {
+          transform: translate(vwm(2px), vwm(-2px));
+        }
       }
     }
   }
@@ -66,7 +90,6 @@
       width: vwm(18px);
       height: vwm(18px);
     }
-
   }
 
   svg path {
@@ -77,5 +100,21 @@
 .job {
   @include Mobile {
     margin-top: vwm(4px);
+  }
+}
+
+.title {
+  margin-bottom: vw(10px);
+
+  @include HD {
+    margin-bottom: vwh(10px);
+  }
+
+  @include Tablet {
+    margin-bottom: vwt(10px);
+  }
+
+  @include Mobile {
+    margin-bottom: vwm(10px);
   }
 }
