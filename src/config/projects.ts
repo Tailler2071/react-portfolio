@@ -1,6 +1,6 @@
-import rh from "../assets/images/projects/rh.png";
-import domru from "../assets/images/projects/domru.png";
-import memory from "../assets/images/projects/memory.png";
+import rh from "../assets/images/projects/rh.webp";
+import domru from "../assets/images/projects/domru.webp";
+import memory from "../assets/images/projects/memory.webp";
 
 const projects = [
     {

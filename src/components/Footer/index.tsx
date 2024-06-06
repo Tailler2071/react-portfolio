@@ -1,4 +1,4 @@
-import planet from "../../assets/images/finally/planet.jpg";
+import planet from "../../assets/images/finally/planet.webp";
 import s from "./s.module.scss";
 import StringToSpans from "../StringToSpans";
 

@@ -59,9 +59,9 @@ const allProjects: IAllProjects[] = [
         id: 6,
         year: 2023,
         project: "Веб-приложение Memory Game",
-        madeAt: "Home Erdgdfg dfg dfgdffffffffgdf",
+        madeAt: "Home",
         technologies: ["TypeScript", "SCSS", "React", "Jest", "NodeJS", "PostgreSQL"],
-        website: 'fgh',
+        website: null,
         github: "https://github.com/Tailler2071/memory-game"
     }
 ];

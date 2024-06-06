@@ -218,7 +218,7 @@
   }
 
   @include Mobile {
-    height: vwm(160px);
+    height: auto;
   }
 
   img {
