@@ -51,6 +51,7 @@
 .link {
   font-weight: bold;
   transition: color 0.2s ease;
+  white-space: nowrap;
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {

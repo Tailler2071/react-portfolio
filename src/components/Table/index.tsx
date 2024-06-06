@@ -10,8 +10,8 @@ const Table = () => {
             <div className={s.header}>
                 <div>Год</div>
                 <div>Проект</div>
-                <div>Сделано в</div>
-                <div>Технологии</div>
+                <div className={s.hMade}>Сделано в</div>
+                <div className={s.hTechno}>Технологии</div>
                 <div>Ссылки</div>
             </div>
 

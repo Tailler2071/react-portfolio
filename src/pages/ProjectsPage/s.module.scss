@@ -106,7 +106,7 @@
 
     @include Mobile {
       width: vwm(20px);
-      height: vwm(23px);
+      height: vwm(20px);
     }
   }
 
@@ -117,5 +117,17 @@
 
 .title {
   margin-bottom: vw(50px);
+
+  @include HD {
+    margin-bottom: vwh(50px);
+  }
+
+  @include Tablet {
+    margin-bottom: vwt(50px);
+  }
+
+  @include Mobile {
+    margin-bottom: vwm(50px);
+  }
 }
 

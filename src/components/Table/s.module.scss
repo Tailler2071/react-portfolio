@@ -7,61 +7,174 @@
 .header {
   position: sticky;
   top: 0;
-  padding: 20px 0;
-  backdrop-filter: blur(8px);
+  padding: vw(20px) 0;
+  backdrop-filter: blur(vw(8px));
   font-weight: 700;
+
+  @include HD {
+    padding: vwh(20px) 0;
+    backdrop-filter: blur(vwh(8px));
+  }
+
+  @include Tablet {
+    padding: vwt(20px) 0;
+    backdrop-filter: blur(vwt(8px));
+  }
+
+  @include Mobile {
+    padding: vwm(18px) 0;
+    backdrop-filter: blur(vwm(8px));
+  }
 }
 
 .header, .row {
   display: grid;
-  grid-template-columns: 65px 350px 150px 370px 100px;
+  grid-template-columns: vw(65px) vw(350px) vw(150px) vw(370px) vw(100px);
   justify-content: space-between;
   align-items: start;
+
+  @include HD {
+    grid-template-columns: vwh(65px) vwh(350px) vwh(150px) vwh(370px) vwh(100px);
+  }
+
+  @include Tablet {
+    grid-template-columns: vwt(65px) vwt(350px) 1fr 1fr;
+    gap: vwt(20px);
+  }
+
+  @include Mobile {
+    grid-template-columns: vwm(35px) vwm(190px) auto;
+    justify-content: start;
+    gap: vwm(15px);
+  }
+}
+
+.hMade {
+  @include Mobile {
+    display: none;
+  }
+}
+
+.hTechno {
+  @include Tablet {
+    display: none;
+  }
 }
 
 .row {
-  padding: 20px 0;
+  padding: vw(20px) 0;
   border-bottom: vw(1px) solid rgba(240, 248, 255, 0.13);
+
+  @include HD {
+    padding: vwh(20px) 0;
+    border-bottom: vwh(1px) solid rgba(240, 248, 255, 0.13);
+  }
+
+  @include Tablet {
+    padding: vwt(20px) 0;
+    border-bottom: vwt(1px) solid rgba(240, 248, 255, 0.13);
+  }
+
+  @include Mobile {
+    padding: vwm(20px) 0;
+    border-bottom: vwm(1px) solid rgba(240, 248, 255, 0.13);
+  }
 }
 
 .row:first-child {
   border-top: vw(1px) solid rgba(240, 248, 255, 0.13);
+
+  @include HD {
+    border-top: vwh(1px) solid rgba(240, 248, 255, 0.13);
+  }
+
+  @include Tablet {
+    border-top: vwt(1px) solid rgba(240, 248, 255, 0.13);
+  }
+
+  @include Mobile {
+    border-top: vwm(1px) solid rgba(240, 248, 255, 0.13);
+  }
 }
 
 .row:last-child {
   border-bottom: none;
 }
 
-
 .year {
   font-weight: 300;
+
+  @include Mobile {
+    font-size: vwm(16px);
+  }
 }
 
 .project {
   font-weight: bold;
-  font-size: 20px;
+  font-size: vw(20px);
+
+  @include HD {
+    font-size: vwh(20px);
+  }
+
+  @include Tablet {
+    font-size: vwt(20px);
+  }
+
+  @include Mobile {
+    font-size: vwm(16px);
+  }
 }
 
 .made {
   font-weight: 300;
+
+  @include Mobile {
+    display: none;
+  }
 }
 
 .badges {
   display: flex;
   flex-wrap: wrap;
-  gap: vw(10px);
+  gap: vw(10px) vw(8px);
+
+  @include HD {
+    gap: vwh(10px) vwh(8px);
+  }
+
+  @include Tablet {
+    display: none;
+  }
 }
 
 .links {
   display: flex;
   align-items: start;
-  gap: 10px;
+  gap: vw(10px);
+
+  @include HD {
+    gap: vwh(10px);
+  }
+
+  @include Tablet {
+    gap: vwt(10px);
+  }
+
+  @include Mobile {
+    gap: vwm(10px);
+  }
 }
 
 .link {
-  padding: 4px;
-}
+  transition: transform 0.2s ease;
 
+  @media (any-hover: hover) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
 
 .git, .website {
   width: vw(30px);

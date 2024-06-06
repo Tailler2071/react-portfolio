@@ -27,7 +27,9 @@ const AboutUs = ({className}: AboutUsProps) => {
                         <li className={s.item} key={course.id}>
                             <LinkLogo/>
                             <span>
-                                <a className={s.link} href={course.link}>{course.name}</a> — {course.description}
+                                <a className={s.link} href={course.link} target={"_blank"}>
+                                    {course.name}
+                                </a> — {course.description}
                             </span>
                         </li>
                     ))}
