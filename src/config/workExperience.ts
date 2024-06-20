@@ -9,7 +9,7 @@ const workExperiences = [
     },
     {
         id: 2,
-        dates: "Апр 2023 — Нояб 2024",
+        dates: "Апр 2023 — Нояб 2023",
         post: "Студент",
         job: "Ya.Practicum",
         link: "https://practicum.yandex.ru",
