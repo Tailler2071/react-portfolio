@@ -1,0 +1,161 @@
+@import "../../scss/utils";
+
+.wrapper {
+  margin: 0 vw(250px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: vw(40px);
+
+  @include HD {
+    margin: 0 vwh(45px);
+    gap: vwh(40px);
+  }
+
+  @include Tablet {
+    grid-template-columns: 1fr;
+    margin: 0 vwt(24x);
+    gap: vwt(40px);
+  }
+
+  @include Mobile {
+    margin: 0 vwm(24px);
+    gap: vwm(40px);
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  padding: vw(160px) 0 vw(100px);
+  height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  align-content: space-between;
+  gap: vw(50px);
+
+  @include HD {
+    padding: vwh(140px) 0 vwh(80px);
+    gap: vwh(50px);
+  }
+
+  @include Tablet {
+    position: static;
+    height: auto;
+    max-height: none;
+    justify-content: start;
+    padding: vwt(80px) 0 vwt(20px);
+    gap: vwt(100px);
+  }
+
+  @include Mobile {
+    padding: vwm(80px) 0 vwm(20px);
+    gap: vwm(30px);
+    justify-content: stretch;
+  }
+}
+
+.info {
+  margin-bottom: vw(90px);
+
+  @include HD {
+    margin-bottom: vwh(90px);
+  }
+
+  @include Tablet {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  display: grid;
+  grid-template-areas:
+    "hello emogi"
+    "name emogi";
+  gap: 0 vw(10px);
+  margin-bottom: vw(20px);
+
+  @include HD {
+    gap: 0 vwh(10px);
+    margin-bottom: vwh(20px);
+  }
+
+  @include Tablet {
+    gap: 0 vwt(10px);
+    margin-bottom: vwt(10px);
+    grid-template-areas:
+    "hello name emogi";
+  }
+
+  @include Mobile {
+    gap: 0 vwm(10px);
+    margin-bottom: vwm(20px);
+    grid-template-areas:
+    "hello emogi"
+    "name emogi";
+    width: 100%;
+  }
+}
+
+.hello {
+  grid-area: hello;
+}
+
+.name {
+  grid-area: name;
+}
+
+.emoji {
+  font-size: vw(56px);
+  grid-area: emogi;
+  align-self: end;
+
+  @include HD {
+    font-size: vwh(56px);
+  }
+
+  @include Tablet {
+    font-size: vwt(42px);
+  }
+
+  @include Mobile {
+    align-self: center;
+    font-size: vwm(54px);
+  }
+}
+
+.text {
+  font-size: vw(20px);
+  font-weight: lighter;
+
+  @include HD {
+    font-size: vwh(20px);
+  }
+
+  @include Tablet {
+    font-size: vwt(18px);
+  }
+
+  @include Mobile {
+    font-size: vwm(18px);
+  }
+}
+
+
+.about {
+  max-width: vw(600px);
+
+  @include HD {
+    max-width: vwh(600px);
+  }
+
+  @include Tablet {
+    max-width: 100%;
+  }
+}
+
+.technologies h2 {
+
+  @include Mobile {
+    max-width: vwm(190px);
+  }
+}

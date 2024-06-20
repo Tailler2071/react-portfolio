@@ -1,0 +1,120 @@
+@import "../../scss/utils";
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: vw(10px);
+  transition: color 0.2s ease;
+
+  @include HD {
+    gap: vwh(10px);
+  }
+
+  @include Tablet {
+    gap: vwt(8px);
+  }
+
+  @include Mobile {
+    gap: vwm(8px);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--link-color-hover);
+
+      svg {
+        stroke: var(--link-color-hover);
+      }
+
+      svg path:nth-child(2) {
+        transform: translate(vw(2px), vw(-2px));
+
+        @include HD {
+          transform: translate(vwh(2px), vwh(-2px));
+        }
+
+        @include Tablet {
+          transform: translate(vwt(2px), vwt(-2px));
+        }
+
+        @include Mobile {
+          transform: translate(vwm(2px), vwm(-2px));
+        }
+      }
+
+      svg path:nth-child(3) {
+        transform: translate(vw(2px), vw(-2px));
+
+        @include HD {
+          transform: translate(vwh(2px), vwh(-2px));
+        }
+
+        @include Tablet {
+          transform: translate(vwt(2px), vwt(-2px));
+        }
+
+        @include Mobile {
+          transform: translate(vwm(2px), vwm(-2px));
+        }
+      }
+    }
+  }
+
+  &:active {
+    transition: color 0.1s ease;
+    color: var(--link-color-active);
+
+    svg {
+      transition: stroke 0.1s ease;
+      stroke: var(--link-color-active);
+    }
+  }
+
+  svg {
+    transition: stroke 0.2s ease;
+    stroke: var(--text-primary);
+    width: vw(22px);
+    height: vw(22px);
+
+    @include HD {
+      width: vwh(22px);
+      height: vwh(22px);
+    }
+
+    @include Tablet {
+      width: vwt(18px);
+      height: vwt(18px);
+    }
+
+    @include Mobile {
+      width: vwm(18px);
+      height: vwm(18px);
+    }
+  }
+
+  svg path {
+    transition: transform 0.1s linear;
+  }
+}
+
+.job {
+  @include Mobile {
+    margin-top: vwm(4px);
+  }
+}
+
+.title {
+  margin-bottom: vw(10px);
+
+  @include HD {
+    margin-bottom: vwh(10px);
+  }
+
+  @include Tablet {
+    margin-bottom: vwt(10px);
+  }
+
+  @include Mobile {
+    margin-bottom: vwm(10px);
+  }
+}

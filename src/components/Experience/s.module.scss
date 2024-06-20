@@ -1,0 +1,18 @@
+@import "../../scss/utils";
+
+.cards {
+  display: grid;
+  gap: vw(40px);
+
+  @include HD {
+    gap: vwh(40px);
+  }
+
+  @include Tablet {
+    gap: vwt(40px);
+  }
+
+  @include Mobile {
+    gap: vwm(40px);
+  }
+}

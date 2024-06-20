@@ -1,0 +1,97 @@
+@import "../../scss/utils";
+
+.cards {
+  display: grid;
+  gap: vw(20px);
+  margin-bottom: vw(30px);
+
+  @include HD {
+    gap: vwh(20px);
+    margin-bottom: vwh(30px);
+  }
+
+  @include Tablet {
+    gap: vwt(20px);
+    margin-bottom: vwt(30px);
+  }
+
+  @include Mobile {
+    gap: vwm(20px);
+    margin-bottom: vwm(30px);
+  }
+}
+
+.link {
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+  gap: vw(5px);
+
+  @include HD {
+    gap: vwh(5px);
+  }
+
+  @include Tablet {
+    gap: vwt(5px);
+  }
+
+  @include Mobile {
+    gap: vwm(5px);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--link-color-hover);
+
+      svg {
+        fill: var(--link-color-hover);
+        transform: translateX(vw(4px));
+
+        @include HD {
+          transform: translateX(vwh(4px));
+        }
+
+        @include Tablet {
+          transform: translateX(vwt(4px));
+        }
+
+        @include Mobile {
+          transform: translateX(vwm(4px));
+        }
+      }
+    }
+  }
+
+  &:active {
+    transition: color 0.1s ease;
+    color: var(--link-color-active);
+
+    svg{
+      transition: fill 0.1s ease;
+      fill: var(--link-color-active);
+    }
+  }
+
+  svg {
+    fill: var(--text-primary);
+    transition: transform 0.2s linear, fill 0.2s ease;
+    width: vw(19px);
+    height: vw(30px);
+
+    @include HD {
+      width: vwh(19px);
+      height: vwh(30px);
+    }
+
+    @include Tablet {
+      width: vwt(19px);
+      height: vwt(30px);
+    }
+
+    @include Mobile {
+      width: vwm(19px);
+      height: vwm(30px);
+    }
+  }
+}

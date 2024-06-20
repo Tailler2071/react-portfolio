@@ -1,0 +1,79 @@
+@import "../../scss/utils";
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: vw(40px) vw(20px);
+
+  @include HD {
+    gap: vwh(40px) vwh(20px);
+  }
+
+  @include Tablet {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: vwt(30px);
+  }
+
+  @include Mobile {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: vwm(20px) vwm(10px);
+  }
+}
+
+.item {
+  display: grid;
+  justify-items: center;
+  gap: vw(12px);
+
+  @include HD {
+    gap: vwh(12px);
+  }
+
+  @include Tablet {
+    gap: vwt(12px);
+  }
+
+  @include Mobile {
+    gap: vwm(12px);
+  }
+
+  svg {
+    width: vw(42px);
+    height: vw(42px);
+
+    @include HD {
+      width: vwh(42px);
+      height: vwh(42px);
+    }
+
+    @include Tablet {
+      width: vwt(36px);
+      height: vwt(36px);
+    }
+
+    @include Mobile {
+      width: vwm(32px);
+      height: vwm(32px);
+    }
+  }
+
+  .name {
+    font-size: vw(16px);
+    white-space: nowrap;
+
+    @include HD {
+      font-size: vwh(16px);
+    }
+
+    @include Tablet {
+      font-size: vwt(16px);
+    }
+
+    @include Mobile {
+      font-size: vwm(14px);
+    }
+  }
+}

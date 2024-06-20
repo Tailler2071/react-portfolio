@@ -1,0 +1,97 @@
+@import "../../scss/utils";
+
+.nav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: start;
+
+  @include Tablet {
+    display: none;
+  }
+}
+
+.numbers {
+  display: grid;
+  margin-right: vw(11px);
+
+  @include HD {
+    margin-right: vwh(11px);
+  }
+
+  li {
+    font-size: vw(13px);
+    font-weight: 700;
+    height: vw(40px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    @include HD {
+      font-size: vwh(13px);
+      height: vwh(40px);
+    }
+  }
+}
+
+.line {
+  position: relative;
+  width: vw(2px);
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: vw(2px);
+
+  @include HD {
+    width: vwh(2px);
+    border-radius: vwh(2px);
+  }
+}
+
+.toddler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: vw(40px);
+  width: vw(2px);
+  border-radius: vw(2px);
+  background-color: #FFFFFF;
+  transition: top 0.2s linear;
+
+  @include HD {
+    height: vwh(40px);
+    width: vwh(2px);
+    border-radius: vwh(2px);
+  }
+}
+
+.right {
+  margin-left: vw(15px);
+  display: grid;
+
+  @include HD {
+    margin-left: vwh(15px);
+  }
+}
+
+.link {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: vw(13px);
+  font-weight: 700;
+  height: vw(40px);
+  align-items: center;
+  display: inline-flex;
+  transition: all 0.1s ease;
+
+  @include HD {
+    font-size: vwh(13px);
+    height: vwh(40px);
+  }
+
+  &:active {
+    text-shadow: 0 vw(3px) vw(13px) #c0c0c0;
+
+    @include HD {
+      text-shadow: 0 vwh(3px) vwh(13px) #c0c0c0;
+    }
+  }
+}

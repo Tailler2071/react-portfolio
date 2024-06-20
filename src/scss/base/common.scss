@@ -1,0 +1,94 @@
+@import "../utils";
+
+html {
+  height: 100%;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: vw(18px);
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--background-color);
+  scrollbar-color: var(--text-primary) var(--background-color);
+  scrollbar-width: thin;
+
+  @include HD {
+    font-size: vwh(18px);
+  }
+
+  @include Tablet {
+    font-size: vwt(18px);
+  }
+
+  @include Mobile {
+    font-size: vwm(16px);
+  }
+}
+
+#root {
+  position: relative;
+}
+
+h1 {
+  font-size: vw(56px);
+  line-height: vw(54px);
+  font-weight: bold;
+
+  @include HD {
+    font-size: vwh(56px);
+    line-height: vwh(54px);
+  }
+
+  @include Tablet {
+    font-size: vwt(42px);
+    line-height: vwt(48px);
+  }
+
+  @include Mobile {
+    font-size: vwm(42px);
+    line-height: vwm(48px);
+  }
+}
+
+h2 {
+  font-size: vw(42px);
+  line-height: vw(54px);
+  font-weight: bold;
+
+  @include HD {
+    font-size: vwh(42px);
+    line-height: vwh(54px);
+  }
+
+  @include Tablet {
+    font-size: vwt(30px);
+    line-height: vwt(38px);
+  }
+
+  @include Mobile {
+    font-size: vwm(28px);
+    line-height: vwm(36px);
+  }
+}
+
+h3 {
+  font-size: vw(28px);
+  line-height: vw(36px);
+  font-weight: bold;
+
+  @include HD {
+    font-size: vwh(28px);
+    line-height: vwh(36px);
+  }
+
+  @include Tablet {
+    font-size: vwt(24px);
+    line-height: vwt(32px);
+  }
+
+  @include Mobile {
+    font-size: vwm(20px);
+    line-height: vwm(30px);
+  }
+}
