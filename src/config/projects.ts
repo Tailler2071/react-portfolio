@@ -5,7 +5,7 @@ import memory from "../assets/images/projects/memory.webp";
 const projects = [
     {
         id: 1,
-        type: "Интернет магазин",
+        type: "Интернет-магазин",
         title: "Rh store",
         description: "Интернет-магазин, специализирующийся на оптовых продажах аксессуаров для телефонов.",
         siteLink: "http://rhstore.master.et9.ru:10580/",
@@ -15,9 +15,9 @@ const projects = [
     },
     {
         id: 2,
-        type: "Интернет магазин",
+        type: "Интернет-магазин",
         title: "shop.dom.ru",
-        description: "Новый сайт интернет-провайдера дом.ру для продажи Wi-Fi роутеров, Яндекс станций, mesh-систем и видеоприставок.",
+        description: "Новый сайт интернет-провайдера Дом.ру для продажи Wi-Fi роутеров, Яндекс станций, Mesh-систем и видеоприставок.",
         siteLink: "https://shop.dom.ru/",
         technologies: ["HTML5", "SCSS", "JavaScript", "PHP", "CMS Simflex"],
         gitLink: null,

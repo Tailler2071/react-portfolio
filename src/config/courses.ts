@@ -3,7 +3,7 @@ const courses = [
         id: 1,
         name: "ПГНИУ",
         link: "http://www.psu.ru/",
-        description: "Введение в web-разработку"
+        description: "Введение в Web-разработку"
     },
     {
         id: 2,

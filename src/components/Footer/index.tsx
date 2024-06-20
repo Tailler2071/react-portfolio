@@ -13,8 +13,8 @@ const Footer = ({title}: FooterProps) => {
                 <StringToSpans text={title}/>
             </h2>
             <p className={s.text}>
-                Я открыт для новых возможностей работы или участия в интересных проектах. Пишите мне в
-                Telegram или на почту с вопросами или просто для знакомства - обязательно отвечу!
+                Сейчас я готов к новым вызовам и интересным проектам. Свяжитесь со мной в Telegram
+                или по почте для обсуждения возможных вариантов сотрудничества.
             </p>
             <div className={s.box}>
                 <a className={s.email} href="mailto:tailler2071@yandex.ru">

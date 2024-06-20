@@ -5,15 +5,15 @@ const workExperiences = [
         post: "Front End разработчик",
         job: "Growtask",
         link: "https://growtask.ru/",
-        description: "Верстка и разработка на JS, поддержка действующего кода. В число клиентов входят Dom.ru, RH store, Space line и др."
+        description: "Верстка и разработка на JS, поддержка действующего кода. В число клиентов входят Dom.ru, RH store, Space Line и др."
     },
     {
         id: 2,
         dates: "Апр 2023 — Июнь 2024",
         post: "Студент",
-        job: "Ya.practicum",
+        job: "Ya.Practicum",
         link: "https://practicum.yandex.ru",
-        description: "Разработка индивидуального проекта, работа в команде по созданию веб игры"
+        description: "Разработка индивидуального проекта (JS). Работа в команде по созданию Web-игры (TS, React, NodeJS)."
     },
 ];
 

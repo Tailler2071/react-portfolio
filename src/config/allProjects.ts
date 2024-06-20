@@ -59,10 +59,19 @@ const allProjects: IAllProjects[] = [
         id: 6,
         year: 2023,
         project: "Веб-приложение Memory Game",
-        madeAt: "Home",
+        madeAt: "Ya.Practicum",
         technologies: ["TypeScript", "SCSS", "React", "Jest", "NodeJS", "PostgreSQL"],
         website: null,
         github: "https://github.com/Tailler2071/memory-game"
+    },
+    {
+        id: 7,
+        year: 2023,
+        project: "Мессенджер",
+        madeAt: "Ya.Practicum",
+        technologies: ["TypeScript", "PostCSS", "Mocha", "Chai", "Handlebars"],
+        website: null,
+        github: "https://github.com/Tailler2071/middle.messenger.praktikum.yandex"
     }
 ];
 
